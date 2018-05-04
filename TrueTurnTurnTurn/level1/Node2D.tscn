@@ -3,15 +3,18 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blocks/BasicBlock.tscn" type="PackedScene" id=2]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
+
+position = Vector2( 6.66669, -23.8095 )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
+position = Vector2( 279.047, 137.142 )
 jumpStrength = 0.2
 maxSpeed = null
 
 [node name="StaticBody2D" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 2.06242, 217.738 )
+position = Vector2( 281.11, 362.5 )
 
 
