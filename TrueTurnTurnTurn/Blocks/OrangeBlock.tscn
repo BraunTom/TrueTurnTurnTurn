@@ -8,6 +8,7 @@
 
 script = ExtResource( 2 )
 active = true
+color = 0
 
 [node name="Sprite" parent="." index="1"]
 
