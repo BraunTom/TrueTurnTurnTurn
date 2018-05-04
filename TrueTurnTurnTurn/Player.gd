@@ -33,7 +33,8 @@ func _process(delta):
     else:
         $AnimatedSprite.stop()
     velocity = applyGravity(velocity)
-    move_and_collide(velocity)
+    #move_and_collide(velocity)
+    move_and_slide(velocity)
 
 func applyGravity(vector):
 	vector.y -= gravityConst
