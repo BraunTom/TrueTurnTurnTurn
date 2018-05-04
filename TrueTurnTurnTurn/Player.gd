@@ -31,6 +31,7 @@ func _process(delta):
     else:
         $AnimatedSprite.stop()
     velocity = applyGravity(velocity)
+    velocity = applyFriction(velocity)
     #move_and_collide(velocity)
     velocity = clampToMaxSpeed(velocity)
     move_and_slide(velocity, Vector2(0, -1))
@@ -39,6 +40,10 @@ func _process(delta):
 
 func applyGravity(vector):
 	vector.y -= gravityConst
+	return vector
+
+func applyFriction(vector):
+	vector.x = vector.x * 0.93
 	return vector
 
 func jump(vector):
