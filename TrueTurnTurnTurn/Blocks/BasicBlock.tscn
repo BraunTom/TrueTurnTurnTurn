@@ -29,5 +29,6 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Region" ]
 
 
