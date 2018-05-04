@@ -23,7 +23,7 @@ position = Vector2( 148.571, 136.19 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-collision/safe_margin = 0.08
+collision/safe_margin = 0.001
 script = ExtResource( 1 )
 gravityConst = -15.3
 jumpStrength = 5.0
@@ -31,13 +31,15 @@ maxSpeed = Vector2( 1000, 1000 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
+position = Vector2( 9.53674e-07, 9.53674e-07 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0.0756016, -0.733251 )
-scale = Vector2( 5.32492, 5.39512 )
+position = Vector2( -2.86102e-06, 0 )
+scale = Vector2( 3.28205, 3.28205 )
 shape = SubResource( 2 )
 
 
