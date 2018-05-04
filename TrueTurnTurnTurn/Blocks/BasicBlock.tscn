@@ -2,11 +2,10 @@
 
 [ext_resource path="res://Blocks/block.png" type="Texture" id=1]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 9.96218 )
+extents = Vector2( 10, 10 )
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
