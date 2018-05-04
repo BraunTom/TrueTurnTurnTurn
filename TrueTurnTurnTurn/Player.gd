@@ -22,8 +22,6 @@ func _process(delta):
 		velocity.x += 30
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 30
-	if Input.is_action_pressed("ui_down"):
-		velocity.y += 30
 	if Input.is_action_pressed("ui_up") && is_on_floor():
 		velocity = jump(velocity)
 	if velocity.length() > 0:
