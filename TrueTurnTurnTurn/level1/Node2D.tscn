@@ -10,7 +10,7 @@
 [ext_resource path="res://level1/Button2.gd" type="Script" id=8]
 [ext_resource path="res://icon.png" type="Texture" id=9]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
