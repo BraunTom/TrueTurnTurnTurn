@@ -34,10 +34,16 @@ func _process(delta):
 	velocity = applyFriction(velocity)
 	#move_and_collide(velocity)
 	velocity = clampToMaxSpeed(velocity)
-	move_and_slide(velocity, Vector2(0, -1))
+	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
-	if is_on_floor():
-		velocity.y = 0
+	for i in range(get_slide_count()):
+		var collision = get_slide_collision(i)
+		
+		if collision.collider.has_method("collideWithPlayer"):
+			collision.collider.collideWithPlayer(self, collision)
+	
+	#if is_on_floor():
+	#	velocity.y = 0
 
 func applyGravity(vector):
 	vector.y -= gravityConst
