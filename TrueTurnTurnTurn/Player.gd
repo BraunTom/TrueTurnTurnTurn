@@ -3,6 +3,7 @@ extends KinematicBody2D
 export (int) var SPEED
 export (float) var gravityConst
 export (float) var jumpStrength
+export (Vector2) var maxSpeed
 var velocity = Vector2()
 # class member variables go here, for example:
 # var a = 2
@@ -12,6 +13,10 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	velocity = Vector2( )
+	SPEED = 10
+	gravityConst = -0.3
+	jumpStrength = 5
+	maxSpeed = Vector2(10, 10)
 	pass
 
 func _process(delta):
