@@ -19,13 +19,14 @@ extents = Vector2( 10, 10 )
 
 [node name="Player" type="KinematicBody2D"]
 
+position = Vector2( 148.571, 136.19 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 SPEED = 10
-velocity = null
+gravityConst = 0.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
