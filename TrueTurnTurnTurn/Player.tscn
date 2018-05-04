@@ -19,15 +19,17 @@ extents = Vector2( 10, 10 )
 
 [node name="Player" type="KinematicBody2D"]
 
-position = Vector2( 148.571, 136.19 )
+position = Vector2( -9.53674e-07, -9.53674e-07 )
+scale = Vector2( 0.9375, 0.9375 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
-gravityConst = -15.3
+_sections_unfolded = [ "collision" ]
+gravityConst = -0.3
 jumpStrength = 5.0
-maxSpeed = Vector2( 1000, 1000 )
+maxSpeed = Vector2( 10, 10 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
