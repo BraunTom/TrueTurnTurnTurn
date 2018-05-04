@@ -38,7 +38,9 @@ func _process(delta):
 	
 	for i in range(get_slide_count()):
 		var collision = get_slide_collision(i)
-		print(collision.collider)
+		
+		if collision.collider.has_method("collideWithPlayer"):
+			collision.collider.collideWithPlayer(self, collision)
 	
 	#if is_on_floor():
 	#	velocity.y = 0
