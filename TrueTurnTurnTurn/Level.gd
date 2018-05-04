@@ -12,3 +12,7 @@ func _ready():
 	
 func colorChanged(newColor):
 	print("Level Got signal")
+
+func respawnPlayer():
+	#replace_by(preload("res://level1/Node2D.tscn").instance())
+	get_tree().reload_current_scene()
