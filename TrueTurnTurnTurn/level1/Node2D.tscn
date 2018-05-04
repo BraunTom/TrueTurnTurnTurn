@@ -47,6 +47,7 @@ position = Vector2( 90, 410 )
 [node name="StaticBody2D" parent="Node2D" index="7" instance=ExtResource( 3 )]
 
 position = Vector2( 463.333, 413.81 )
+active = true
 
 [node name="StaticBody2D9" parent="Node2D" index="8" instance=ExtResource( 4 )]
 
@@ -54,5 +55,6 @@ position = Vector2( 580, 410 )
 rotation = -1.5197
 scale = Vector2( 2.53125, 2.53125 )
 script = ExtResource( 5 )
+active = true
 
 

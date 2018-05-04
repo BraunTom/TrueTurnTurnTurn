@@ -4,6 +4,8 @@ extends StaticBody2D
 # var a = 2
 # var b = "textvar"
 
+export var active = true setget setActive, isActive
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -13,3 +15,13 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+func collideWithPlayer(collider, collision):
+	pass
+	
+	
+func setActive(isActive):
+	active = isActive
+func isActive():
+	return active
