@@ -17,7 +17,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -25,8 +25,8 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 SPEED = 10
-gravityConst = -0.3
-jumpStrength = 5.0
+gravityConst = -0.1
+jumpStrength = null
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
