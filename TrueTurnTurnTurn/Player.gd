@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-export (int) var SPEED
 export (float) var gravityConst
 export (float) var jumpStrength
 export (Vector2) var maxSpeed
@@ -13,19 +12,18 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	velocity = Vector2( )
-	SPEED = 10
-	gravityConst = -0.3
-	jumpStrength = 5
-	maxSpeed = Vector2(10, 10)
+	gravityConst = -15.3
+	jumpStrength = 500
+	maxSpeed = Vector2(1000, 1000)
 	pass
 
 func _process(delta):
     if Input.is_action_pressed("ui_right"):
-        velocity.x += 1
+        velocity.x += 30
     if Input.is_action_pressed("ui_left"):
-        velocity.x -= 1
+        velocity.x -= 30
     if Input.is_action_pressed("ui_down"):
-        velocity.y += 1
+        velocity.y += 30
     if Input.is_action_pressed("ui_up"):
         velocity = jump(velocity)
     if velocity.length() > 0:
@@ -34,6 +32,8 @@ func _process(delta):
         $AnimatedSprite.stop()
     velocity = applyGravity(velocity)
     #move_and_collide(velocity)
+    print(velocity)
+    velocity = clampToMaxSpeed(velocity)
     move_and_slide(velocity)
 
 func applyGravity(vector):
@@ -41,5 +41,10 @@ func applyGravity(vector):
 	return vector
 
 func jump(vector):
-	vector.y = jumpStrength
+	vector.y = -jumpStrength
+	return vector
+
+func clampToMaxSpeed(vector):
+	vector.x = clamp(vector.x, -maxSpeed.x, maxSpeed.x)
+	vector.y = clamp(vector.y, -maxSpeed.y, maxSpeed.y)
 	return vector
