@@ -43,7 +43,7 @@ func _process(delta):
 			collision.collider.collideWithPlayer(self, collision)
 	
 	#if is_on_floor():
-	#	velocity.y = 0
+	#	velocity.y = 0 
 
 func applyGravity(vector):
 	vector.y -= gravityConst
