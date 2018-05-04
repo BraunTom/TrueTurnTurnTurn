@@ -1,5 +1,5 @@
 extends "res://Blocks/BasicBlock.gd"
-const Player = preload("../player.gd")
+const Player = preload("res://Player.gd")
 
 
 #func _process(delta):
@@ -11,5 +11,6 @@ func collideWithPlayer(collider, collision):
 	if (not collider is Player):
 		return
 	else:
-		var dir = collision.travel.reflect(collision.normal)
-		player.velocity = dir
+		var dir = -collision.travel.reflect(collision.normal)
+		print(dir)
+		collider.velocity += dir * 100
