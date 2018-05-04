@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="New Game Project"
-run/main_scene="res://Blocks/BasicBlock.tscn"
+run/main_scene="res://level1/Node2D.tscn"
 config/icon="res://icon.png"
 
 [rendering]
