@@ -7,9 +7,12 @@
 [node name="StaticBody2D" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+active = true
 
 [node name="Sprite" parent="." index="1"]
 
+position = Vector2( -2.86102e-06, -3.8147e-06 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 

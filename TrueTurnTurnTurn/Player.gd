@@ -22,8 +22,6 @@ func _process(delta):
 		velocity.x += 30
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 30
-	if Input.is_action_pressed("ui_down"):
-		velocity.y += 30
 	if Input.is_action_pressed("ui_up") && is_on_floor():
 		velocity = jump(velocity)
 	if velocity.length() > 0:
@@ -36,14 +34,14 @@ func _process(delta):
 	velocity = clampToMaxSpeed(velocity)
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	
-	for i in range(get_slide_count()):
-		var collision = get_slide_collision(i)
+	if get_slide_count() > 0:
+		var collision = get_slide_collision(0)
 		
 		if collision.collider.has_method("collideWithPlayer"):
 			collision.collider.collideWithPlayer(self, collision)
 	
 	#if is_on_floor():
-	#	velocity.y = 0
+	#	velocity.y = 0  
 
 func applyGravity(vector):
 	vector.y -= gravityConst

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/block orange.png-4b0bdee9cab836f171d15f14bea46cb7.stex"
+path="res://.import/halfblock_green.png-a25883351b562ef0d615cca853c1e3a0.stex"
 
 [deps]
 
-source_file="res://Blocks/block orange.png"
-source_md5="7b43e4f690adc2e69bde61fffed6e685"
+source_file="res://Blocks/halfblock_green.png"
+source_md5="bd9010d97157788472e8061ab5d17e31"
 
-dest_files=[ "res://.import/block orange.png-4b0bdee9cab836f171d15f14bea46cb7.stex" ]
-dest_md5="e5b602e5bd3976a07f3b74a0f50a4623"
+dest_files=[ "res://.import/halfblock_green.png-a25883351b562ef0d615cca853c1e3a0.stex" ]
+dest_md5="169c5ce43e9e76ad1f734254f56d2338"
 
 [params]
 
