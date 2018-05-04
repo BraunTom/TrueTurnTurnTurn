@@ -24,20 +24,26 @@ func _process(delta):
         velocity.x -= 30
     if Input.is_action_pressed("ui_down"):
         velocity.y += 30
-    if Input.is_action_pressed("ui_up"):
+    if Input.is_action_pressed("ui_up") && is_on_floor():
         velocity = jump(velocity)
     if velocity.length() > 0:
         $AnimatedSprite.play()
     else:
         $AnimatedSprite.stop()
     velocity = applyGravity(velocity)
+    velocity = applyFriction(velocity)
     #move_and_collide(velocity)
-    print(velocity)
     velocity = clampToMaxSpeed(velocity)
-    move_and_slide(velocity)
+    move_and_slide(velocity, Vector2(0, -1))
+    if is_on_floor():
+       print("jump ready")
 
 func applyGravity(vector):
 	vector.y -= gravityConst
+	return vector
+
+func applyFriction(vector):
+	vector.x = vector.x * 0.93
 	return vector
 
 func jump(vector):
