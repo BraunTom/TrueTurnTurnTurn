@@ -13,4 +13,4 @@ func collideWithPlayer(collider, collision):
 	else:
 		var dir = -collision.travel.reflect(collision.normal)
 		print(dir)
-		collider.velocity = dir * 100
+		collider.velocity += dir * 100
