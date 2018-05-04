@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export (int) var SPEED
 export (float) var gravityConst
+export (float) var jumpStrength
 var velocity = Vector2()
 # class member variables go here, for example:
 # var a = 2
@@ -21,7 +22,7 @@ func _process(delta):
     if Input.is_action_pressed("ui_down"):
         velocity.y += 1
     if Input.is_action_pressed("ui_up"):
-        velocity.y -= 1
+        velocity = jump(velocity)
     if velocity.length() > 0:
         $AnimatedSprite.play()
     else:
@@ -33,3 +34,6 @@ func applyGravity(vector):
 	vector.y -= gravityConst
 	return vector
 
+func jump(vector):
+	vector.y = jumpStrength
+	return vector

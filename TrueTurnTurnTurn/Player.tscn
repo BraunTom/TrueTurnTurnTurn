@@ -26,7 +26,8 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 SPEED = 10
-gravityConst = 0.0
+gravityConst = -0.3
+jumpStrength = 5.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
