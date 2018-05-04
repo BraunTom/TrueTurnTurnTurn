@@ -8,7 +8,9 @@ const Player = preload("res://Player.gd")
 #	pass
 
 func collideWithPlayer(collider, collision):
-	if (not collider is Player):
+	if(not active):
+		return
+	elif (not collider is Player):
 		return
 	else:
 		var dir = -collision.travel.reflect(collision.normal)
