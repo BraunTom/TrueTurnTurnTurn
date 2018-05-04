@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/halfBlock.png-d94ae5684fa4ba4fab5d59c6bfb1b1ac.stex"
+path="res://.import/halfBlock.png-599d0eac50274cc1637b53a8d7f14c4c.stex"
 
 [deps]
 
-source_file="res://halfBlock.png"
+source_file="res://Blocks/halfBlock.png"
 source_md5="056fc2c0e695128c7195667632f85e39"
 
-dest_files=[ "res://.import/halfBlock.png-d94ae5684fa4ba4fab5d59c6bfb1b1ac.stex" ]
+dest_files=[ "res://.import/halfBlock.png-599d0eac50274cc1637b53a8d7f14c4c.stex" ]
 dest_md5="1a4605671a08728a64dd7a0dd3b3c97f"
 
 [params]
