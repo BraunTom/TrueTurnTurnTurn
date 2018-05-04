@@ -18,27 +18,37 @@ func _ready():
 	pass
 
 func _process(delta):
-    if Input.is_action_pressed("ui_right"):
-        velocity.x += 30
-    if Input.is_action_pressed("ui_left"):
-        velocity.x -= 30
-    if Input.is_action_pressed("ui_down"):
-        velocity.y += 30
-    if Input.is_action_pressed("ui_up") && is_on_floor():
-        velocity = jump(velocity)
-    if velocity.length() > 0:
-        $AnimatedSprite.play()
-    else:
-        $AnimatedSprite.stop()
-    velocity = applyGravity(velocity)
-    #move_and_collide(velocity)
-    velocity = clampToMaxSpeed(velocity)
-    move_and_slide(velocity, Vector2(0, -1))
-    if is_on_floor():
-       print("jump ready")
+	if Input.is_action_pressed("ui_right"):
+		velocity.x += 30
+	if Input.is_action_pressed("ui_left"):
+		velocity.x -= 30
+	if Input.is_action_pressed("ui_down"):
+		velocity.y += 30
+	if Input.is_action_pressed("ui_up") && is_on_floor():
+		velocity = jump(velocity)
+	if velocity.length() > 0:
+		$AnimatedSprite.play()
+	else:
+		$AnimatedSprite.stop()
+	velocity = applyGravity(velocity)
+	velocity = applyFriction(velocity)
+	#move_and_collide(velocity)
+	velocity = clampToMaxSpeed(velocity)
+	velocity = move_and_slide(velocity, Vector2(0, -1))
+	
+	for i in range(get_slide_count()):
+		var collision = get_slide_collision(i)
+		print(collision.collider)
+	
+	#if is_on_floor():
+	#	velocity.y = 0
 
 func applyGravity(vector):
 	vector.y -= gravityConst
+	return vector
+
+func applyFriction(vector):
+	vector.x = vector.x * 0.93
 	return vector
 
 func jump(vector):
