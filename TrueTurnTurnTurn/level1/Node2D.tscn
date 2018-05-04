@@ -5,8 +5,6 @@
 
 [node name="Level1" type="Node2D"]
 
-position = Vector2( 6.66669, -23.8095 )
-
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 60, 350 )

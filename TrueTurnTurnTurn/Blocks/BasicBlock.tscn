@@ -33,6 +33,5 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 position = Vector2( -0.00143576, 0.0210924 )
 scale = Vector2( 0.370593, 0.370241 )
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Region" ]
 
 
