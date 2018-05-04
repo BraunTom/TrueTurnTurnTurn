@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Blocks/BasicBlock.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Blocks/OrangeBlock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Blocks/HalfBlock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Blocks/OrangeBlock.gd" type="Script" id=5]
 
 [node name="Level1" type="Node2D" index="0"]
 
@@ -12,5 +15,18 @@ maxSpeed = null
 [node name="StaticBody2D" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 2.06242, 217.738 )
+
+[node name="StaticBody2D" parent="Node2D" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 463.333, 413.81 )
+active = true
+
+[node name="StaticBody2D9" parent="Node2D" index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 580, 410 )
+rotation = -1.5197
+scale = Vector2( 2.53125, 2.53125 )
+script = ExtResource( 5 )
+active = true
 
 

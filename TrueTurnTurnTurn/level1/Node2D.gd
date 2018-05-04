@@ -1,27 +1,19 @@
-extends StaticBody2D
+extends Node2D
 
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
 
-export var active = true setget setActive, isActive
-
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	print('test')
 	pass
 
+func respawnPlayer():
+	#replace_by(preload("res://level1/Node2D.tscn").instance())
+	get_tree().reload_current_scene()
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
-
-
-func collideWithPlayer(collider, collision):
-	pass
-	
-	
-func setActive(isActive):
-	active = isActive
-func isActive():
-	return active
