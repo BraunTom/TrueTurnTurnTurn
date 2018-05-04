@@ -8,7 +8,7 @@ custom_solver_bias = 0.0
 extents = Vector2( 10, 9.96218 )
 _sections_unfolded = [ "Resource" ]
 
-[node name="BasicBlock" type="StaticBody2D" index="0"]
+[node name="BasicBlock" type="StaticBody2D"]
 
 position = Vector2( 9.53674e-07, 9.53674e-07 )
 scale = Vector2( 0.9375, 0.9375 )
@@ -23,15 +23,15 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( -1.43051e-06, -3.8147e-06 )
+position = Vector2( -1.43051e-06, -6.75557e-07 )
 scale = Vector2( 3.28205, 3.29163 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( -1.78814e-06, -1.78814e-06 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( -0.00544554, -0.00860983 )
+scale = Vector2( 0.512452, 0.511998 )
 texture = ExtResource( 1 )
 
 
