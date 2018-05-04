@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="BasicBlock" type="StaticBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -28,6 +28,5 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 1 )
-_sections_unfolded = [ "Region" ]
 
 
