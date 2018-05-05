@@ -48,10 +48,10 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite" index="0"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="2"]
 
-position = Vector2( 0.00387422, -0.0569694 )
-scale = Vector2( 2.69838, 2.70094 )
+position = Vector2( -1.1172e-09, -7.94694e-09 )
+scale = Vector2( 1, 0.999999 )
 occluder = SubResource( 2 )
 light_mask = 1
 _sections_unfolded = [ "Visibility", "Z Index" ]

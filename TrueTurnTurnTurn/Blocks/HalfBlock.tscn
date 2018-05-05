@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Blocks/BasicBlock.gd" type="Script" id=1]
 [ext_resource path="res://Blocks/Assets/halfblock_white.png" type="Texture" id=2]
