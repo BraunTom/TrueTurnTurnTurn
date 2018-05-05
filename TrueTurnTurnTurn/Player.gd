@@ -82,5 +82,5 @@ func clampToMaxSpeed(vector):
 	vector.y = clamp(vector.y, -maxSpeed.y, maxSpeed.y)
 	return vector
 	
-func collectedGloboli():
-	
+func collectedGloboli(newColor):
+	get_parent().notifyLightChange(newColor)

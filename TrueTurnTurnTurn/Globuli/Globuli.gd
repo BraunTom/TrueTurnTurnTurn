@@ -4,9 +4,12 @@ extends StaticBody2D
 # var a = 2
 # var b = "textvar"
 
+var color = 1
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	
 	pass
 
 #func _process(delta):
@@ -15,5 +18,5 @@ func _ready():
 #	pass
 
 func getCollectedFrom(player):
-	player.collectedGloboli()
+	player.collectedGloboli(color)
 	queue_free()
