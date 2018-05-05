@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Level.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -7,8 +7,9 @@
 [ext_resource path="res://level1/Button.gd" type="Script" id=5]
 [ext_resource path="res://level1/Button2.gd" type="Script" id=6]
 [ext_resource path="res://icon.png" type="Texture" id=7]
+[ext_resource path="res://Globuli/Globuli.tscn" type="PackedScene" id=8]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -17,6 +18,8 @@ script = ExtResource( 1 )
 position = Vector2( 60, 350 )
 
 [node name="Node2D" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="StaticBody2D2" parent="Node2D" index="0" instance=ExtResource( 3 )]
 
@@ -46,10 +49,6 @@ position = Vector2( 31, 410 )
 
 position = Vector2( 150, 410 )
 
-[node name="StaticBody2D5" parent="Node2D" index="7" instance=ExtResource( 3 )]
-
-position = Vector2( 90, 410 )
-
 [node name="BasicBlock" parent="Node2D" index="7" instance=ExtResource( 3 )]
 
 position = Vector2( 450, 410 )
@@ -60,6 +59,10 @@ color = 1
 position = Vector2( 450, 360 )
 scale = Vector2( 0.9375, 0.9375 )
 color = 2
+
+[node name="StaticBody2D5" parent="Node2D" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 90, 410 )
 
 [node name="Button" type="Button" parent="." index="2"]
 
@@ -135,5 +138,9 @@ motion_mirroring = Vector2( 0, 0 )
 position = Vector2( 650, 415 )
 scale = Vector2( 25.625, 12.8906 )
 texture = ExtResource( 7 )
+
+[node name="Glubuli" parent="." index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 340, 370 )
 
 
