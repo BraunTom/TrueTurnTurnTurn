@@ -1,4 +1,4 @@
-extends "res://Blocks/BlockBehavior.gd"
+extends "res://Blocks/Behaviors/BlockBehavior.gd"
 const Player = preload("res://Player.gd")
 
 
@@ -13,5 +13,4 @@ func collideWithPlayer(collider, collision):
 	elif (not collider is Player):
 		return
 	else:
-		var dir = -collision.travel.reflect(collision.normal)
-		collider.velocity += dir * 100
+		collider.die()

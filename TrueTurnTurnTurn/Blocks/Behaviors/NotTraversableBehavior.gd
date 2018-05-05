@@ -1,4 +1,4 @@
-extends "res://Blocks/BlockBehavior.gd"
+extends "res://Blocks/Behaviors/BlockBehavior.gd"
 const Player = preload("res://Player.gd")
 
 
@@ -10,7 +10,7 @@ const Player = preload("res://Player.gd")
 		
 func setActive(isActive):
 	.setActive(isActive)
-	print("Actively2")
-	var mask = 2 if isActive else 1
+	print("Actively")
+	var mask = 1 if isActive else 2
 	block.set_collision_layer(mask)
 	block.set_collision_mask(mask)
