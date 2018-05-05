@@ -15,13 +15,14 @@ const behaviorMap = {
 
 export var active = true setget setActive, isActive
 export var color = LightClass.Colors.WHITE setget setColor, getColor
-export var behavior = behaviorMap[LightClass.Colors.WHITE]
+var behavior = behaviorMap[LightClass.Colors.WHITE]
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	get_parent().get_parent().connect("LIGHT_CHANGED", self, "colorChanged")
 	updateTexture()
+	updateBehavior()
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
