@@ -8,7 +8,7 @@
 [ext_resource path="res://Globuli/Globuli.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Blocks/BasicBlock.tscn" type="PackedScene" id=7]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="level_1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
