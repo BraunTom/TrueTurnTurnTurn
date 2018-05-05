@@ -1,4 +1,4 @@
-extends "res://Blocks/BasicBlock.gd"
+extends "res://Blocks/BlockBehavior.gd"
 const Player = preload("res://Player.gd")
 
 
@@ -7,8 +7,8 @@ const Player = preload("res://Player.gd")
 #	# Update game logic here.
 #	pass
 
-func collideWithPlayer(collider, collision):
-	if(not active):
+static func collideWithPlayer(block, collider, collision):
+	if(not block.isActive()):
 		return
 	elif (not collider is Player):
 		return

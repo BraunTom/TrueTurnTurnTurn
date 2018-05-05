@@ -2,14 +2,20 @@ extends StaticBody2D
 const LightClass = preload("res://Light.gd")
 
 
+const emptyBehavior = preload("res://Blocks/BlockBehavior.gd")
+const bounceBehavior = preload("res://Blocks/BounceBehavior.gd")
+const killBehavior = preload("res://Blocks/killBehavior.gd")
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+const behaviorMap = {
+	LightClass.Colors.WHITE : emptyBehavior,
+	LightClass.Colors.RED : killBehavior,
+	LightClass.Colors.GREEN : emptyBehavior,
+	LightClass.Colors.ORANGE : bounceBehavior
+}
 
 export var active = true setget setActive, isActive
 export var color = LightClass.Colors.WHITE setget setColor, getColor
-#export var behavior = 
+export var behavior = behaviorMap[LightClass.Colors.WHITE]
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -24,7 +30,7 @@ func _ready():
 
 
 func collideWithPlayer(collider, collision):
-	pass
+	behavior.collideWithPlayer(self, collider, collision)
 	
 	
 func setActive(isActive):
@@ -35,6 +41,7 @@ func isActive():
 func setColor(newColor):
 	color = newColor
 	updateTexture()
+	updateBehavior()
 
 func getColor():
 	return color
@@ -50,4 +57,7 @@ func updateTexture():
 func getTexture(color):
 	if(get_node("Sprite") != null):
 		return get_node("Sprite").getTexture(color)
+		
+func updateBehavior():
+	behavior = behaviorMap[color]
 	

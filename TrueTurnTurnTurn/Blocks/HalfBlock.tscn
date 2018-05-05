@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Blocks/BasicBlock.gd" type="Script" id=1]
-[ext_resource path="res://Blocks/halfblock_white.png" type="Texture" id=2]
-[ext_resource path="res://Blocks/HalfSprite.gd" type="Script" id=3]
+[ext_resource path="res://Blocks/BlockBehavior.gd" type="Script" id=2]
+[ext_resource path="res://Blocks/halfblock_white.png" type="Texture" id=3]
+[ext_resource path="res://Blocks/HalfSprite.gd" type="Script" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -22,13 +23,14 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 active = true
 color = 0
+behavior = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 position = Vector2( -0.169494, -0.169491 )
 scale = Vector2( 0.338983, 0.338983 )
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
