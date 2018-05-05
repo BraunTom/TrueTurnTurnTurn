@@ -13,4 +13,5 @@ func collideWithPlayer(collider, collision):
 	elif (not collider is Player):
 		return
 	else:
-		collider.die()
+		if collider.status == -1:
+			collider.die()

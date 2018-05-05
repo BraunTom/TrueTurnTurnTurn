@@ -12,7 +12,7 @@ func _ready():
 	
 func colorChanged(newColor):
 	print("Level Got signal")
-	flipAll()
+	#flipAll()
 	
 func flipAll():
 	var m = Transform2D()
