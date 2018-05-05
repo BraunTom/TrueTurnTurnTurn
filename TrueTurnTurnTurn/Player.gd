@@ -2,6 +2,24 @@ extends KinematicBody2D
 
 const LightClass = preload("res://Light.gd")
 
+const whiteTexture = preload("res://player/player/player white.png")
+const redTexture = preload("res://player/player/player red.png")
+const orangeTexture = preload("res://player/player/player orange.png")
+const yellowTexture = preload("res://player/player/player yellow.png")
+const blueTexture = preload("res://player/player/player blue.png")
+const greenTexture = preload("res://player/player/player green.png")
+const goalTexture = whiteTexture
+
+const textureMap = {
+	LightClass.Colors.WHITE : whiteTexture,
+	LightClass.Colors.RED : redTexture,
+	LightClass.Colors.ORANGE : orangeTexture,
+	LightClass.Colors.YELLOW : yellowTexture,
+	LightClass.Colors.BLUE : blueTexture,
+	LightClass.Colors.GREEN : greenTexture,
+	LightClass.Colors.END : goalTexture
+}
+
 var gravityConst = -20
 var jumpStrength = 450
 var maxSpeed = Vector2(1000, 1000)
@@ -9,11 +27,15 @@ var velocity = Vector2()
 var directionOfVelocity = Vector2(1,1)
 var controls = ["ui_right", "ui_left"]
 
-var status = -1
+var color = LightClass.Colors.WHITE
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here	
+	var frames = get_node('AnimatedSprite').get_sprite_frames()
+	for c in textureMap:
+		frames.add_animation(str(c))
+		frames.add_frame(str(c), textureMap[c])
+	get_node("/root").get_child(0).connect("LIGHT_CHANGED", self, "updateTexture")
+	updateTexture()
 	pass
 
 
@@ -56,7 +78,7 @@ func _process(delta):
 	#	velocity.y = 0  
 
 func die():
-	status = -1
+	#status = 0
 	get_owner().respawnPlayer()
 
 func flipSpeed(vector):
@@ -89,8 +111,15 @@ func clampToMaxSpeed(vector):
 	
 func collectedGloboli(newColor):
 	var lightPowerArray = [1.0, 1.2, 1.5, 1.1, 1.5, 1.2]
-	status = newColor
+	color = newColor
 	
 	get_parent().notifyLightChange(newColor)
 	$Light2D.color = LightClass.get_light_color(newColor)
 	$Light2D.energy = lightPowerArray[newColor]
+
+func updateTexture():
+	get_node("AnimatedSprite").play(str(color))
+
+func getTexture(color):
+		return textureMap[color]
+		

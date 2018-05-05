@@ -8,10 +8,9 @@ const Player = preload("res://Player.gd")
 #	pass
 
 func collideWithPlayer(collider, collision):
-	if(not block.isActive()):
+	if(block.isActive()):
 		return
 	elif (not collider is Player):
 		return
 	else:
-		if collider.status == -1:
-			collider.die()
+		collider.die()
