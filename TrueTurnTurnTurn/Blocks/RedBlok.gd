@@ -1,10 +1,6 @@
 extends "res://Blocks/BasicBlock.gd"
 const Player = preload("res://Player.gd")
-const LightClass = preload("res://Light.gd")
 
-func _ready():
-	._ready()
-	color = LightClass.Colors.ORANGE
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
@@ -17,6 +13,4 @@ func collideWithPlayer(collider, collision):
 	elif (not collider is Player):
 		return
 	else:
-		var dir = -collision.travel.reflect(collision.normal)
-		print(dir)
-		collider.velocity += dir * 100
+		collider.die()
