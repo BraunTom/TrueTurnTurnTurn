@@ -7,6 +7,7 @@ const bounceBehavior = preload("res://Blocks/BounceBehavior.gd")
 const killBehavior = preload("res://Blocks/killBehavior.gd")
 const getTraversBehavior = preload("res://Blocks/GetTraversableBehavior.gd")
 const notTraversBehavior = preload("res://Blocks/NotTraversableBehavior.gd")
+const goalBehavior = preload("res://Blocks/goalBehavior.gd")
 
 const behaviorMap = {
 	LightClass.Colors.WHITE : emptyBehavior,
@@ -14,7 +15,8 @@ const behaviorMap = {
 	LightClass.Colors.ORANGE : bounceBehavior,
 	LightClass.Colors.YELLOW : emptyBehavior,
 	LightClass.Colors.BLUE : getTraversBehavior,
-	LightClass.Colors.GREEN : notTraversBehavior
+	LightClass.Colors.GREEN : notTraversBehavior,
+	LightClass.Colors.END : notTraversBehavior
 }
 
 export var active = true setget setActive, isActive
