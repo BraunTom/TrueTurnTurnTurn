@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Blocks/BasicBlock.gd" type="Script" id=1]
-[ext_resource path="res://Blocks/BlockBehavior.gd" type="Script" id=2]
-[ext_resource path="res://Blocks/block white.png" type="Texture" id=3]
-[ext_resource path="res://Blocks/FullSprite.gd" type="Script" id=4]
+[ext_resource path="res://Blocks/block white.png" type="Texture" id=2]
+[ext_resource path="res://Blocks/FullSprite.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -18,7 +17,7 @@ cull_mode = 0
 polygon = PoolVector2Array( 32.7946, -32.7804, 32.8281, 32.7919, -32.8863, 32.7065, -32.7871, -32.7701 )
 _sections_unfolded = [ "Resource" ]
 
-[node name="BasicBlock" type="StaticBody2D"]
+[node name="BasicBlock" type="StaticBody2D" index="0"]
 
 position = Vector2( 9.53674e-07, 9.53674e-07 )
 scale = Vector2( 0.9375, 0.9375 )
@@ -30,10 +29,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 active = true
 color = 0
-behavior = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -47,8 +45,8 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 editor/display_folded = true
 position = Vector2( -0.00143576, 0.0210924 )
 scale = Vector2( 0.370593, 0.370241 )
-texture = ExtResource( 3 )
-script = ExtResource( 4 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite" index="0"]
 
