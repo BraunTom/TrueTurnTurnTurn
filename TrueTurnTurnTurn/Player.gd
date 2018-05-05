@@ -49,7 +49,7 @@ func _process(delta):
 		get_node('AnimatedSprite').set_flip_h(false)
 	if Input.is_action_pressed("ui_up") && is_on_floor():
 		velocity = jump(velocity)
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_key_pressed(KEY_R):
 		die()
 	if velocity.length() > 0:
 		$AnimatedSprite.play()
