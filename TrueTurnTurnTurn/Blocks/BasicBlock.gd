@@ -2,12 +2,12 @@ extends StaticBody2D
 const LightClass = preload("res://Light.gd")
 
 
-const emptyBehavior = preload("res://Blocks/BlockBehavior.gd")
-const bounceBehavior = preload("res://Blocks/BounceBehavior.gd")
-const killBehavior = preload("res://Blocks/killBehavior.gd")
-const getTraversBehavior = preload("res://Blocks/GetTraversableBehavior.gd")
-const notTraversBehavior = preload("res://Blocks/NotTraversableBehavior.gd")
-const goalBehavior = preload("res://Blocks/goalBehavior.gd")
+const emptyBehavior = preload("res://Blocks/Behaviors/BlockBehavior.gd")
+const bounceBehavior = preload("res://Blocks/Behaviors/BounceBehavior.gd")
+const killBehavior = preload("res://Blocks/Behaviors/KillBehavior.gd")
+const getTraversBehavior = preload("res://Blocks/Behaviors/GetTraversableBehavior.gd")
+const notTraversBehavior = preload("res://Blocks/Behaviors/NotTraversableBehavior.gd")
+const goalBehavior = preload("res://Blocks/Behaviors/GoalBehavior.gd")
 
 const behaviorMap = {
 	LightClass.Colors.WHITE : emptyBehavior,
