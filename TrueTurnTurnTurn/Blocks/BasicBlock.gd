@@ -9,8 +9,10 @@ const killBehavior = preload("res://Blocks/killBehavior.gd")
 const behaviorMap = {
 	LightClass.Colors.WHITE : emptyBehavior,
 	LightClass.Colors.RED : killBehavior,
-	LightClass.Colors.GREEN : emptyBehavior,
-	LightClass.Colors.ORANGE : bounceBehavior
+	LightClass.Colors.ORANGE : bounceBehavior,
+	LightClass.Colors.YELLOW : emptyBehavior,
+	LightClass.Colors.BLUE : emptyBehavior,
+	LightClass.Colors.GREEN : emptyBehavior
 }
 
 export var active = true setget setActive, isActive
