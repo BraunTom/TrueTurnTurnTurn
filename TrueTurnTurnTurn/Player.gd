@@ -31,11 +31,12 @@ var color = LightClass.Colors.WHITE
 
 func _ready():
 	var frames = get_node('AnimatedSprite').get_sprite_frames()
+	frames.clear_all()
 	for c in textureMap:
 		frames.add_animation(str(c))
 		frames.add_frame(str(c), textureMap[c])
-	get_node("/root").get_child(0).connect("LIGHT_CHANGED", self, "updateTexture")
-	updateTexture()
+	get_node("/root").get_child(0).connect("LIGHT_CHANGED", self, "colorChanged")
+	colorChanged(color)
 	pass
 
 
@@ -117,7 +118,8 @@ func collectedGloboli(newColor):
 	$Light2D.color = LightClass.get_light_color(newColor)
 	$Light2D.energy = lightPowerArray[newColor]
 
-func updateTexture():
+func colorChanged(color):
+	print("Update")
 	get_node("AnimatedSprite").play(str(color))
 
 func getTexture(color):
