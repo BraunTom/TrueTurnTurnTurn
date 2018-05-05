@@ -10,5 +10,7 @@ func collideWithPlayer(collider, collision):
 	elif (not collider is Player):
 		return
 	else:
-		print('next scene')
-		#get_tree().change_scene('res://level2/level2.tscn')
+		block.set_collision_layer(2)
+		block.set_collision_mask(2)
+		print(block.get_tree())
+		block.get_tree().change_scene('res://level2/level2.tscn')

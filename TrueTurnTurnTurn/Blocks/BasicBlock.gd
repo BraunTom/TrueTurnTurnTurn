@@ -13,9 +13,9 @@ const behaviorMap = {
 	LightClass.Colors.WHITE : emptyBehavior,
 	LightClass.Colors.RED : killBehavior,
 	LightClass.Colors.ORANGE : bounceBehavior,
-	LightClass.Colors.YELLOW : emptyBehavior,
+	LightClass.Colors.YELLOW : notTraversBehavior,
 	LightClass.Colors.BLUE : getTraversBehavior,
-	LightClass.Colors.GREEN : notTraversBehavior,
+	LightClass.Colors.GREEN : emptyBehavior,
 	LightClass.Colors.END : goalBehavior
 }
 
