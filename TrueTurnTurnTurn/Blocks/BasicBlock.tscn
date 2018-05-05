@@ -29,7 +29,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 active = true
 color = 0
 
@@ -42,11 +42,11 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( -0.00143576, 0.0210924 )
 scale = Vector2( 0.370593, 0.370241 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite" index="0"]
 
