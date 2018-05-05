@@ -23,7 +23,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 position = Vector2( -9.53674e-07, -9.53674e-07 )
 scale = Vector2( 0.9375, 0.9375 )
@@ -33,8 +33,8 @@ collision_mask = 1
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
 _sections_unfolded = [ "collision" ]
-gravityConst = -45.0
-jumpStrength = 600.0
+gravityConst = -15.3
+jumpStrength = 500
 maxSpeed = Vector2( 1000, 1000 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
