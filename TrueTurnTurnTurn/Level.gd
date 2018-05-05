@@ -26,13 +26,11 @@ func flipAll():
 func flipGravity(node):
 	for N in node.get_children():
 		if N.get_child_count() > 0:
-			print("["+N.get_name()+"]")
 			if(N.has_method("flipSpeed")):
 				N.flipSpeed(Vector2(1,-1))
 			flipGravity(N)
 		else:
 			# Do something
-			print("- "+N.get_name())
 			if(N.has_method("flipSpeed")):
 				N.flipSpeed(Vector2(1,-1))
 

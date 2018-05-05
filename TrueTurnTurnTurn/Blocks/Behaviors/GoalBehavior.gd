@@ -5,12 +5,12 @@ const Player = preload("res://Player.gd")
 # var b = "textvar"
 
 func collideWithPlayer(collider, collision):
-	if(not block.isActive()):
-		return
-	elif (not collider is Player):
+	if (not collider is Player):
 		return
 	else:
 		block.set_collision_layer(2)
 		block.set_collision_mask(2)
-		print(block.get_tree())
-		block.get_tree().change_scene('res://level2/level2.tscn')
+		var nextLevelPath = 'res://level{number}/level{number}.tscn'.format({'number': int(block.get_tree().get_current_scene().get_name().split('_')[1]) + 1})
+		
+		if Directory.new().file_exists(nextLevelPath):
+			block.get_tree().change_scene(nextLevelPath)
