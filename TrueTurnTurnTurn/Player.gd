@@ -111,7 +111,7 @@ func clampToMaxSpeed(vector):
 	return vector
 	
 func collectedGloboli(newColor):
-	var lightPowerArray = [1.0, 1.2, 1.5, 1.1, 1.5, 1.2]
+	var lightPowerArray = [1.5, 2.0, 2.5, 1.5, 2.5, 2.0]
 	color = newColor
 	
 	get_parent().notifyLightChange(newColor)
