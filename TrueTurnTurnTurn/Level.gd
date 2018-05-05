@@ -16,14 +16,11 @@ func colorChanged(newColor):
 	
 func flipAll():
 	var m = Transform2D()
-	m = m.rotated(PI) # rotate 90°
+	m = m.rotated(PI)
 	var m2 = Transform2D( ).scaled(Vector2(-1,1))
 	m = m2 * m
-	print(m)
-	flipGravity(self)
-	#Physics2DServer.area_set_param(RID(self), Physics2DServer.AREA_PARAM_GRAVITY_VECTOR, Vector2(-1,-1))
-	
 	set_global_transform(get_global_transform() * m)
+	#flipGravity(self)
 	
 
 func flipGravity(node):
