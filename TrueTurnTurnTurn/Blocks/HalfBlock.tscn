@@ -1,18 +1,21 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Blocks/BasicBlock.gd" type="Script" id=1]
-[ext_resource path="res://Blocks/Behaviors/BlockBehavior.gd" type="Script" id=2]
-[ext_resource path="res://Blocks/Assets/halfblock_white.png" type="Texture" id=3]
-[ext_resource path="res://Blocks/HalfSprite.gd" type="Script" id=4]
-
-
+[ext_resource path="res://Blocks/Assets/halfblock_white.png" type="Texture" id=2]
+[ext_resource path="res://Blocks/HalfSprite.gd" type="Script" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = PoolVector2Array( 10, -10, 10, 10, -10, 10 )
 
-[node name="StaticBody2D" type="StaticBody2D" index="0"]
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -31, 28, 29, 28, 29, -32 )
+
+[node name="StaticBody2D" type="StaticBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -25,14 +28,13 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 active = true
 color = 0
-behavior = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 position = Vector2( -0.169494, -0.169491 )
 scale = Vector2( 0.338983, 0.338983 )
-texture = ExtResource( 3 )
-script = ExtResource( 4 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
@@ -40,5 +42,11 @@ position = Vector2( -1.90735e-06, 1.90735e-06 )
 scale = Vector2( 3.07692, 3.07692 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="2"]
+
+position = Vector2( 1, 2 )
+occluder = SubResource( 2 )
+light_mask = 1
 
 
