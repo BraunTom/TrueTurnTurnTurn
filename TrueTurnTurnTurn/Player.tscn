@@ -23,7 +23,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 0.625, 0.625 )
 input_pickable = false
@@ -31,15 +31,17 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
-_sections_unfolded = [ "collision" ]
+_sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
+light_mask = 0
 position = Vector2( 9.53674e-07, 9.53674e-07 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "default"
 flip_h = true
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
