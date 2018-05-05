@@ -24,9 +24,10 @@ var behavior = createBehavior(behaviorMap[color])
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	get_parent().get_parent().connect("LIGHT_CHANGED", self, "colorChanged")
+	get_node("/root").get_child(0).connect("LIGHT_CHANGED", self, "colorChanged")
 	updateTexture()
 	updateBehavior()
+	self.active = active
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
@@ -52,7 +53,7 @@ func getColor():
 	return color
 	
 func colorChanged(newColor):
-	# setColor(newColor)# TODO remove this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	setColor(newColor)# TODO remove this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	setActive(color == newColor)
 
 func updateTexture():
