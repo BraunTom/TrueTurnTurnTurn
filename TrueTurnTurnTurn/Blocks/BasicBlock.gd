@@ -55,7 +55,6 @@ func getColor():
 	return color
 	
 func colorChanged(newColor):
-	setColor(newColor)# TODO remove this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	setActive(color == newColor)
 
 func updateTexture():
