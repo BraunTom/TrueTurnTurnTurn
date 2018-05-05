@@ -33,9 +33,6 @@ collision_mask = 1
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
 _sections_unfolded = [ "collision" ]
-gravityConst = -15.3
-jumpStrength = 500
-maxSpeed = Vector2( 1000, 1000 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
@@ -61,7 +58,7 @@ texture = ExtResource( 3 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
-energy = 1.0
+energy = 1.5
 mode = 0
 range_height = 0.0
 range_z_min = -1024
