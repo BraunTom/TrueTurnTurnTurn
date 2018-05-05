@@ -7,10 +7,10 @@ path="res://.import/halfblock_white.png-112f3c7286b95761aa13af5e67fa6fe1.stex"
 [deps]
 
 source_file="res://Blocks/halfblock_white.png"
-source_md5="6b25ef30c2f778ebe87acc48da24e65b"
+source_md5="e3db758785fcb5a497e4f9efd717d721"
 
 dest_files=[ "res://.import/halfblock_white.png-112f3c7286b95761aa13af5e67fa6fe1.stex" ]
-dest_md5="cfc60d07779cb25c3de0accdd4525f49"
+dest_md5="322489e0ab0ef51069bceffa9cf27f0a"
 
 [params]
 
