@@ -8,7 +8,7 @@
 [ext_resource path="res://Globuli/Globuli.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Blocks/BasicBlock.tscn" type="PackedScene" id=7]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -120,6 +120,7 @@ texture = ExtResource( 5 )
 [node name="Glubuli" parent="." index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 340, 370 )
+color = 1
 
 [node name="blocks" type="Node2D" parent="." index="5"]
 
