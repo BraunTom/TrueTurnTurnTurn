@@ -24,12 +24,12 @@ func flipGravity(node):
 	for N in node.get_children():
 		if N.get_child_count() > 0:
 			if(N.has_method("flipSpeed")):
-				N.flipSpeed(Vector2(1,-1))
+				N.directionOfVelocity.y = N.directionOfVelocity.y * -1
 			flipGravity(N)
 		else:
 			# Do something
 			if(N.has_method("flipSpeed")):
-				N.flipSpeed(Vector2(1,-1))
+				N.directionOfVelocity.y = N.directionOfVelocity.y * -1
 
 func respawnPlayer():
 	#replace_by(preload("res://level1/Node2D.tscn").instance())
