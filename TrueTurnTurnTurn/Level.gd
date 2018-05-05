@@ -12,7 +12,7 @@ func _ready():
 	
 func colorChanged(newColor):
 	print("Level Got signal")
-	#flipAll()
+	flipAll()
 	
 func flipAll():
 	var m = Transform2D()
@@ -20,7 +20,7 @@ func flipAll():
 	var m2 = Transform2D( ).scaled(Vector2(-1,1))
 	m = m2 * m
 	set_global_transform(get_global_transform() * m)
-	#flipGravity(self)
+	flipGravity(self)
 	
 
 func flipGravity(node):
