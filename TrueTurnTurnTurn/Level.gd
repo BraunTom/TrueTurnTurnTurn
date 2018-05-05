@@ -12,6 +12,17 @@ func _ready():
 	
 func colorChanged(newColor):
 	print("Level Got signal")
+	flipAll()
+func flipAll():
+	var m = Transform2D()
+	m = m.rotated(PI) # rotate 90°
+	var m2 = Transform2D( ).scaled(Vector2(-1,1))
+	m = m2 * m
+	print(m)
+	#Physics2DServer.area_set_param(RID(self), Physics2DServer.AREA_PARAM_GRAVITY_VECTOR, Vector2(-1,-1))
+	
+	set_global_transform(get_global_transform() * m)
+	
 
 func respawnPlayer():
 	#replace_by(preload("res://level1/Node2D.tscn").instance())
