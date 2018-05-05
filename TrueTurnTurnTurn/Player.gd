@@ -20,8 +20,10 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed(controls[0]):
 		velocity.x += 30
+		get_node('AnimatedSprite').set_flip_h(true)
 	if Input.is_action_pressed(controls[1]):
 		velocity.x -= 30
+		get_node('AnimatedSprite').set_flip_h(false)
 	if Input.is_action_pressed("ui_up") && is_on_floor():
 		velocity = jump(velocity)
 	if Input.is_action_pressed("ui_down"):
