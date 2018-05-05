@@ -13,3 +13,7 @@ func setActive(isActive):
 	var mask = 1 if isActive else 2
 	block.set_collision_layer(mask)
 	block.set_collision_mask(mask)
+	mask = mask * mask * mask
+	block.get_node("Sprite").get_node("LightOccluder2D").set_occluder_light_mask(mask)
+	# block.get_node("Sprite").remove_child(block.get_node("Sprite").get_node("LightOccluder2D"))
+	
