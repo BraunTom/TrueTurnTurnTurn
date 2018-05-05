@@ -1,16 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Level.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocks/BasicBlock.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Blocks/HalfBlock.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Blocks/OrangeBlock.gd" type="Script" id=5]
-[ext_resource path="res://Blocks/OrangeBlock.tscn" type="PackedScene" id=6]
-[ext_resource path="res://level1/Button.gd" type="Script" id=7]
-[ext_resource path="res://level1/Button2.gd" type="Script" id=8]
-[ext_resource path="res://icon.png" type="Texture" id=9]
+[ext_resource path="res://level1/Button.gd" type="Script" id=5]
+[ext_resource path="res://level1/Button2.gd" type="Script" id=6]
+[ext_resource path="res://icon.png" type="Texture" id=7]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -49,43 +47,44 @@ editor_draw_drag_margin = false
 
 position = Vector2( 390, 410 )
 
-[node name="StaticBody2D6" parent="Node2D" index="1" instance=ExtResource( 3 )]
+[node name="StaticBody2D10" parent="Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 270, 350 )
+
+[node name="StaticBody2D6" parent="Node2D" index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 270, 410 )
 
-[node name="StaticBody2D7" parent="Node2D" index="2" instance=ExtResource( 3 )]
+[node name="StaticBody2D7" parent="Node2D" index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 210, 410 )
 
-[node name="StaticBody2D8" parent="Node2D" index="3" instance=ExtResource( 3 )]
+[node name="StaticBody2D8" parent="Node2D" index="4" instance=ExtResource( 3 )]
 
 position = Vector2( 330, 410 )
 
-[node name="StaticBody2D3" parent="Node2D" index="4" instance=ExtResource( 3 )]
+[node name="StaticBody2D3" parent="Node2D" index="5" instance=ExtResource( 3 )]
 
 position = Vector2( 31, 410 )
 
-[node name="StaticBody2D4" parent="Node2D" index="5" instance=ExtResource( 3 )]
+[node name="StaticBody2D4" parent="Node2D" index="6" instance=ExtResource( 3 )]
 
 position = Vector2( 150, 410 )
 
-[node name="StaticBody2D5" parent="Node2D" index="6" instance=ExtResource( 3 )]
+[node name="StaticBody2D5" parent="Node2D" index="7" instance=ExtResource( 3 )]
 
 position = Vector2( 90, 410 )
 
-[node name="StaticBody2D9" parent="Node2D" index="7" instance=ExtResource( 4 )]
+[node name="BasicBlock" parent="Node2D" index="7" instance=ExtResource( 3 )]
 
-position = Vector2( 580, 410 )
-rotation = -1.5197
-scale = Vector2( 2.53125, 2.53125 )
-script = ExtResource( 5 )
-active = true
-color = 0
+position = Vector2( 450, 410 )
+color = 1
 
-[node name="StaticBody2D" parent="Node2D" index="8" instance=ExtResource( 6 )]
+[node name="StaticBody2D" parent="Node2D" index="8" instance=ExtResource( 4 )]
 
-position = Vector2( 480, 410 )
-scale = Vector2( 0.878906, 0.878906 )
+position = Vector2( 450, 360 )
+scale = Vector2( 0.9375, 0.9375 )
+color = 2
 
 [node name="Button" type="Button" parent="." index="2"]
 
@@ -109,7 +108,7 @@ group = null
 text = "Turn Light White"
 flat = false
 align = 1
-script = ExtResource( 7 )
+script = ExtResource( 5 )
 
 [node name="Button2" type="Button" parent="." index="3"]
 
@@ -134,7 +133,7 @@ group = null
 text = "Turn Light Orange"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 6 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="4"]
 
@@ -160,6 +159,4 @@ motion_mirroring = Vector2( 0, 0 )
 
 position = Vector2( 650, 415 )
 scale = Vector2( 25.625, 12.8906 )
-texture = ExtResource( 9 )
-
-
+texture = ExtResource( 7 )
