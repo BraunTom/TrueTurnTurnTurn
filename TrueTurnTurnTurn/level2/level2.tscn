@@ -2,4 +2,6 @@
 
 [node name="level_2" type="Node2D" index="0"]
 
+[node name="Blocks" type="Node2D" parent="." index="0"]
+
 

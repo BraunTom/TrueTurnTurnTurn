@@ -7,7 +7,7 @@
 [ext_resource path="res://Blocks/HalfBlock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Globuli/Globuli.tscn" type="PackedScene" id=6]
 
-[node name="level_1" type="Node2D"]
+[node name="level_1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -42,6 +42,7 @@ editor_draw_drag_margin = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="1"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -338,11 +339,9 @@ color = 4
 
 [node name="green_blocks" type="Node2D" parent="blocks" index="3"]
 
-editor/display_folded = true
-
 [node name="BasicBlock" parent="blocks/green_blocks" index="0" instance=ExtResource( 4 )]
 
-position = Vector2( 300, 240 )
+position = Vector2( 360, 240 )
 color = 5
 
 [node name="BasicBlock2" parent="blocks/green_blocks" index="1" instance=ExtResource( 4 )]
@@ -378,35 +377,23 @@ color = 1
 
 [node name="end_blocks" type="Node2D" parent="blocks" index="6"]
 
-editor/display_folded = true
-
 [node name="BasicBlock" parent="blocks/end_blocks" index="0" instance=ExtResource( 4 )]
 
-position = Vector2( -360, 290 )
+position = Vector2( 480, 590 )
 color = 6
 
 [node name="halfblocks" type="Node2D" parent="." index="3"]
-
-editor/display_folded = true
 
 [node name="orange" type="Node2D" parent="halfblocks" index="0"]
 
 [node name="StaticBody2D" parent="halfblocks/orange" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 480, 350 )
+position = Vector2( 540, 350 )
 color = 1
 
 [node name="blue" type="Node2D" parent="halfblocks" index="1"]
 
-[node name="StaticBody2D" parent="halfblocks/blue" index="0" instance=ExtResource( 5 )]
-
-position = Vector2( 478.562, 348.994 )
-rotation = 3.14159
-color = 4
-
 [node name="Node2D" type="Node2D" parent="." index="4"]
-
-editor/display_folded = true
 
 [node name="Globuli_white" parent="Node2D" index="0" instance=ExtResource( 6 )]
 
@@ -415,7 +402,12 @@ scale = Vector2( 0.625, 0.625 )
 
 [node name="Glubuli_blue" parent="Node2D" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 340, 370 )
+position = Vector2( 120, 140 )
 color = 4
+
+[node name="Globuli_orange" parent="Node2D" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( -360, 310 )
+color = 1
 
 

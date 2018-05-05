@@ -6,9 +6,4 @@
 
 color = 6
 
-[node name="LightOccluder2D" parent="Sprite" index="0"]
-
-light_mask = 0
-light_mask = 0
-
 
