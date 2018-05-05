@@ -1,4 +1,4 @@
-enum Colors {WHITE, ORANGE, RED, YELLOW, BLUE, GREEN}
+enum Colors {WHITE, ORANGE, RED, YELLOW, BLUE, GREEN, END}
 
 static func get_light_color(index):
 	var lightColorArray = [
