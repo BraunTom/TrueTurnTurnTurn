@@ -9,6 +9,12 @@
 custom_solver_bias = 0.0
 points = PoolVector2Array( 10, -10, 10, 10, -10, 10 )
 
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -31, 28, 29, 28, 29, -32 )
+
 [node name="StaticBody2D" type="StaticBody2D"]
 
 input_pickable = false
@@ -36,5 +42,11 @@ position = Vector2( -1.90735e-06, 1.90735e-06 )
 scale = Vector2( 3.07692, 3.07692 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="2"]
+
+position = Vector2( 1, 2 )
+occluder = SubResource( 2 )
+light_mask = 1
 
 
