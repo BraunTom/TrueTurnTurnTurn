@@ -55,6 +55,9 @@ func _process(delta):
 	#if is_on_floor():
 	#	velocity.y = 0  
 
+func die():
+	get_owner().respawnPlayer()
+
 func flipSpeed(vector):
 	directionOfVelocity = vector
 
