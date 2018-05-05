@@ -23,7 +23,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 position = Vector2( -9.53674e-07, -9.53674e-07 )
 scale = Vector2( 0.9375, 0.9375 )
@@ -61,7 +61,7 @@ texture = ExtResource( 3 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
-energy = 1.0
+energy = 1.5
 mode = 0
 range_height = 0.0
 range_z_min = -1024

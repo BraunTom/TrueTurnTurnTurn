@@ -1,15 +1,13 @@
 extends KinematicBody2D
 
+const LightClass = preload("res://Light.gd")
+
 export (float) var gravityConst = -15.3
 export (float) var jumpStrength = 500
 export (Vector2) var maxSpeed = Vector2(1000, 1000)
 var velocity = Vector2()
 var directionOfVelocity = Vector2(1,1)
 var controls = ["ui_right", "ui_left"]
-
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -84,3 +82,4 @@ func clampToMaxSpeed(vector):
 	
 func collectedGloboli(newColor):
 	get_parent().notifyLightChange(newColor)
+	$Light2D.color = LightClass.get_light_color(newColor)
