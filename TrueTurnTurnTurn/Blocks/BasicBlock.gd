@@ -16,7 +16,7 @@ const behaviorMap = {
 	LightClass.Colors.YELLOW : emptyBehavior,
 	LightClass.Colors.BLUE : getTraversBehavior,
 	LightClass.Colors.GREEN : notTraversBehavior,
-	LightClass.Colors.END : notTraversBehavior
+	LightClass.Colors.END : goalBehavior
 }
 
 export var active = true setget setActive, isActive
