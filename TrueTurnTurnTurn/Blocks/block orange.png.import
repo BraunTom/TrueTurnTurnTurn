@@ -7,10 +7,10 @@ path="res://.import/block orange.png-4b0bdee9cab836f171d15f14bea46cb7.stex"
 [deps]
 
 source_file="res://Blocks/block orange.png"
-source_md5="77f4170884b9a4e9b6025e71fbb525ca"
+source_md5="1338d9dd8eb59f308444679564061817"
 
 dest_files=[ "res://.import/block orange.png-4b0bdee9cab836f171d15f14bea46cb7.stex" ]
-dest_md5="220278a857e517b1e4e391a855268aa1"
+dest_md5="2d63a841cb306bebf8dc3e64b122e9fc"
 
 [params]
 

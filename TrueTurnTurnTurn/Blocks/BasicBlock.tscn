@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Blocks/block white.png" type="Texture" id=1]
+[ext_resource path="res://Blocks/BasicBlock.gd" type="Script" id=1]
+[ext_resource path="res://Blocks/block white.png" type="Texture" id=2]
+[ext_resource path="res://Blocks/FullSprite.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -26,7 +28,10 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+active = true
+color = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -37,9 +42,11 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( -0.00143576, 0.0210924 )
 scale = Vector2( 0.370593, 0.370241 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite" index="0"]
 
