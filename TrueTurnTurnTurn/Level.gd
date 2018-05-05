@@ -12,6 +12,7 @@ func _ready():
 	
 func colorChanged(newColor):
 	print("Level Got signal")
+	#flipAll()
 	
 func flipAll():
 	var m = Transform2D()
@@ -19,9 +20,9 @@ func flipAll():
 	var m2 = Transform2D( ).scaled(Vector2(-1,1))
 	m = m2 * m
 	set_global_transform(get_global_transform() * m)
+	#flipGravity(self)
 	
-	
-"""
+
 func flipGravity(node):
 	for N in node.get_children():
 		if N.get_child_count() > 0:
@@ -34,7 +35,7 @@ func flipGravity(node):
 			print("- "+N.get_name())
 			if(N.has_method("flipSpeed")):
 				N.flipSpeed(Vector2(1,-1))
-"""
+
 func respawnPlayer():
 	#replace_by(preload("res://level1/Node2D.tscn").instance())
 	get_tree().reload_current_scene()

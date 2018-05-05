@@ -37,7 +37,7 @@ func _process(delta):
 	#move_and_collide(velocity)
 	
 	velocity = clampToMaxSpeed(velocity)
-	velocity = move_and_slide(applyFlip(velocity), Vector2(0, -1))
+	velocity = applyFlip(move_and_slide(applyFlip(velocity), applyFlip(Vector2(0, -1))))
 	
 	
 		
@@ -65,7 +65,8 @@ func rotateControls(array):
 	array.push_front(array.pop_back())
 
 func applyFlip(vector):
-	vector = vector * directionOfVelocity
+	vector.x = vector.x * directionOfVelocity.x
+	vector.y = vector.y * directionOfVelocity.y
 	return vector
 	
 func applyGravity(vector):
