@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Level.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Blocks/OrangeBlock.tscn" type="PackedScene" id=6]
 [ext_resource path="res://level1/Button.gd" type="Script" id=7]
 [ext_resource path="res://level1/Button2.gd" type="Script" id=8]
+[ext_resource path="res://icon.png" type="Texture" id=9]
 
 [node name="Level1" type="Node2D" index="0"]
 
@@ -111,5 +112,31 @@ text = "Turn Light Orange"
 flat = false
 align = 1
 script = ExtResource( 8 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="4"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+position = Vector2( 650, 415 )
+scale = Vector2( 25.625, 12.8906 )
+texture = ExtResource( 9 )
 
 
