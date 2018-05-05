@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Blocks/block white.png" type="Texture" id=3]
+[ext_resource path="res://player/PlayerLight.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -53,8 +53,8 @@ shape = SubResource( 2 )
 [node name="Light2D" type="Light2D" parent="." index="2"]
 
 show_behind_parent = true
-position = Vector2( 0, 3.8147e-06 )
-scale = Vector2( 4, 3.83333 )
+position = Vector2( -6.67572e-06, 5.34058e-05 )
+scale = Vector2( 1.024, 1.024 )
 enabled = true
 editor_only = false
 texture = ExtResource( 3 )
@@ -90,8 +90,8 @@ audio_bus_name = "Master"
 
 [node name="vision_area" type="CollisionShape2D" parent="vision_area" index="0"]
 
-position = Vector2( 1.01725e-06, 1.01725e-06 )
-scale = Vector2( 25.8686, 24.4327 )
+position = Vector2( 1.01725e-06, -1.71661e-05 )
+scale = Vector2( 25.8686, 25.4359 )
 shape = SubResource( 3 )
 
 
