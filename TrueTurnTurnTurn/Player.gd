@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 const LightClass = preload("res://Light.gd")
 
-export (float) var gravityConst = -15.3
-export (float) var jumpStrength = 500
-export (Vector2) var maxSpeed = Vector2(1000, 1000)
+var gravityConst = -20
+var jumpStrength = 450
+var maxSpeed = Vector2(1000, 1000)
 var velocity = Vector2()
 var directionOfVelocity = Vector2(1,1)
 var controls = ["ui_right", "ui_left"]
