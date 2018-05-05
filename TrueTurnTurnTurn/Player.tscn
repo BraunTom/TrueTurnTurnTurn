@@ -23,10 +23,9 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
-position = Vector2( -9.53674e-07, -9.53674e-07 )
-scale = Vector2( 0.9375, 0.9375 )
+scale = Vector2( 0.625, 0.625 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -50,8 +49,8 @@ shape = SubResource( 2 )
 [node name="Light2D" type="Light2D" parent="." index="2"]
 
 show_behind_parent = true
-position = Vector2( -6.67572e-06, 5.34058e-05 )
-scale = Vector2( 1.024, 1.024 )
+position = Vector2( 2.28882e-05, -4.57764e-05 )
+scale = Vector2( 2.048, 2.048 )
 enabled = true
 editor_only = false
 texture = ExtResource( 3 )
@@ -87,8 +86,8 @@ audio_bus_name = "Master"
 
 [node name="vision_area" type="CollisionShape2D" parent="vision_area" index="0"]
 
-position = Vector2( 1.01725e-06, -1.71661e-05 )
-scale = Vector2( 25.8686, 25.4359 )
+position = Vector2( 3.05176e-05, 4.57764e-05 )
+scale = Vector2( 39.3846, 39.3846 )
 shape = SubResource( 3 )
 
 

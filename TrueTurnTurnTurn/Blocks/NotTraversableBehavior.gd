@@ -10,6 +10,7 @@ const Player = preload("res://Player.gd")
 		
 func setActive(isActive):
 	.setActive(isActive)
+	print("Actively")
 	var mask = 1 if isActive else 2
 	block.set_collision_layer(mask)
 	block.set_collision_mask(mask)
