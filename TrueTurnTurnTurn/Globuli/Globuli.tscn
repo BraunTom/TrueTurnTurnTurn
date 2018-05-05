@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 9.14867, 8.40133 )
 
-[node name="Globuli" type="StaticBody2D" index="0"]
+[node name="Globuli" type="StaticBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -29,8 +29,8 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -2.38419e-07, 2.38419e-07 )
-scale = Vector2( 1.53846, 0.769231 )
+position = Vector2( -0.324898, 0.150349 )
+scale = Vector2( 2.0834, 1.50741 )
 shape = SubResource( 1 )
 
 
