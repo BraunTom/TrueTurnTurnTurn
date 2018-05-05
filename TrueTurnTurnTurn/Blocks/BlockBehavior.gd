@@ -1,4 +1,4 @@
 extends Node
 
-func collideWithPlayer(collider, collision):
+static func collideWithPlayer(block, collider, collision):
 	pass
