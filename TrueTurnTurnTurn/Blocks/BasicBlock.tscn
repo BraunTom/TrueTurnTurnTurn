@@ -17,7 +17,7 @@ cull_mode = 0
 polygon = PoolVector2Array( 32.7946, -32.7804, 32.8281, 32.7919, -32.8863, 32.7065, -32.7871, -32.7701 )
 _sections_unfolded = [ "Resource" ]
 
-[node name="BasicBlock" type="StaticBody2D"]
+[node name="BasicBlock" type="StaticBody2D" index="0"]
 
 position = Vector2( 9.53674e-07, 9.53674e-07 )
 scale = Vector2( 0.9375, 0.9375 )
@@ -29,7 +29,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 active = true
 color = 0
 

@@ -7,10 +7,9 @@ const Player = preload("res://Player.gd")
 #	# Update game logic here.
 #	pass
 
-func collideWithPlayer(collider, collision):
-	if(not block.isActive()):
-		return
-	elif (not collider is Player):
-		return
-	else:
-		collider.die()
+		
+func setActive(isActive):
+	.setActive(isActive)
+	var mask = 2 if isActive else 1
+	block.set_collision_layer(mask)
+	block.set_collision_mask(mask)

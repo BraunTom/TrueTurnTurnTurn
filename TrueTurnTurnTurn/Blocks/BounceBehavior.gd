@@ -7,7 +7,7 @@ const Player = preload("res://Player.gd")
 #	# Update game logic here.
 #	pass
 
-static func collideWithPlayer(block, collider, collision):
+func collideWithPlayer(collider, collision):
 	if(not block.isActive()):
 		return
 	elif (not collider is Player):

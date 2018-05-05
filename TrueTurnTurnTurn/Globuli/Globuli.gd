@@ -9,6 +9,7 @@ export var color = LightClass.Colors.WHITE setget setColor, getColor
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	print(color)
 	updateTexture()
 	pass
 
