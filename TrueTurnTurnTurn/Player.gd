@@ -9,6 +9,8 @@ var velocity = Vector2()
 var directionOfVelocity = Vector2(1,1)
 var controls = ["ui_right", "ui_left"]
 
+var status = -1
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here	
@@ -21,8 +23,6 @@ func _process(delta):
 	if Input.is_action_pressed(controls[1]):
 		velocity.x -= 30
 	if Input.is_action_pressed("ui_up") && is_on_floor():
-		print("debug")
-		print(jumpStrength)
 		velocity = jump(velocity)
 	if Input.is_action_pressed("ui_down"):
 		rotateControls(controls)
@@ -54,6 +54,7 @@ func _process(delta):
 	#	velocity.y = 0  
 
 func die():
+	status = -1
 	get_owner().respawnPlayer()
 
 func flipSpeed(vector):
@@ -86,6 +87,7 @@ func clampToMaxSpeed(vector):
 	
 func collectedGloboli(newColor):
 	var lightPowerArray = [1.0, 1.2, 1.5, 1.1, 1.5, 1.2]
+	status = newColor
 	
 	get_parent().notifyLightChange(newColor)
 	$Light2D.color = LightClass.get_light_color(newColor)

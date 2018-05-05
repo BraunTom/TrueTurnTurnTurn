@@ -7,7 +7,7 @@ const orangeTexture = preload("res://Blocks/Assets/block orange.png")
 const yellowTexture = preload("res://Blocks/Assets/block yellow.png")
 const blueTexture = preload("res://Blocks/Assets/block blue.png")
 const greenTexture = preload("res://Blocks/Assets/block green.png")
-const goalTexture = preload("res://Blocks/Assets/block green.png")
+const goalTexture = preload("res://Blocks/Assets/finish_torte.svg")
 
 const textureMap = {
 	LightClass.Colors.WHITE : whiteTexture,

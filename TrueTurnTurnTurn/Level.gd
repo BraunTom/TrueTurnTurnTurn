@@ -8,11 +8,8 @@ func notifyLightChange(color):
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	connect("LIGHT_CHANGED", self, "colorChanged")
-	
-func colorChanged(newColor):
-	print("Level Got signal")
-	flipAll()
+	pass
+
 	
 func flipAll():
 	var m = Transform2D()
