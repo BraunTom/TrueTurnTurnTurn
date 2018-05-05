@@ -2,6 +2,24 @@ extends KinematicBody2D
 
 const LightClass = preload("res://Light.gd")
 
+const whiteTexture = preload("res://player/player/Player white.png")
+const redTexture = preload("res://player/player/Player red.png")
+const orangeTexture = preload("res://player/player/Player orange.png")
+const yellowTexture = preload("res://player/player/Player yellow.png")
+const blueTexture = preload("res://player/player/Player blue.png")
+const greenTexture = preload("res://player/player/Player green.png")
+const goalTexture = whiteTexture
+
+const textureMap = {
+	LightClass.Colors.WHITE : whiteTexture,
+	LightClass.Colors.RED : redTexture,
+	LightClass.Colors.ORANGE : orangeTexture,
+	LightClass.Colors.YELLOW : yellowTexture,
+	LightClass.Colors.BLUE : blueTexture,
+	LightClass.Colors.GREEN : greenTexture,
+	LightClass.Colors.END : goalTexture
+}
+
 var gravityConst = -20
 var jumpStrength = 450
 var maxSpeed = Vector2(1000, 1000)
@@ -12,16 +30,17 @@ var controls = ["ui_right", "ui_left"]
 var status = -1
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here	
-	pass
+	get_node("/root").get_child(0).connect("LIGHT_CHANGED", self, "updateTexture")
+	updateTexture()
 
 
 func _process(delta):
 	if Input.is_action_pressed(controls[0]):
 		velocity.x += 30
+		get_node('AnimatedSprite').set_flip_h(true)
 	if Input.is_action_pressed(controls[1]):
 		velocity.x -= 30
+		get_node('AnimatedSprite').set_flip_h(false)
 	if Input.is_action_pressed("ui_up") && is_on_floor():
 		velocity = jump(velocity)
 	if Input.is_action_pressed("ui_down"):
@@ -92,3 +111,10 @@ func collectedGloboli(newColor):
 	get_parent().notifyLightChange(newColor)
 	$Light2D.color = LightClass.get_light_color(newColor)
 	$Light2D.energy = lightPowerArray[newColor]
+
+func updateTexture():
+	get_node("Sprite").set_texture(getTexture(color))
+
+func getTexture(color):
+		return textureMap[color]
+		
