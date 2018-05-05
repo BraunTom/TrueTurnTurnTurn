@@ -1,18 +1,14 @@
-extends Node
+extends "res://Blocks/BlockBehavior.gd"
 const Player = preload("res://Player.gd")
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
 
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
-
-static func collideWithPlayer(block, collider, collision):
+static func collideWithPlayer(collider, collision):
 	if(not block.isActive()):
 		return
 	elif (not collider is Player):
 		return
 	else:
-		get_tree().change_scene('res://level2/level2.tscn')
+		print('next scene')
+		#get_tree().change_scene('res://level2/level2.tscn')
