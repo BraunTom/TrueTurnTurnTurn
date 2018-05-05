@@ -23,7 +23,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 0.625, 0.625 )
 input_pickable = false
@@ -64,7 +64,7 @@ range_z_min = -1024
 range_z_max = 1024
 range_layer_min = -1
 range_layer_max = 0
-range_item_cull_mask = 3
+range_item_cull_mask = 1
 shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 0 )
 shadow_buffer_size = 2048
