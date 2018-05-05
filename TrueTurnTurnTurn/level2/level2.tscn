@@ -4,7 +4,7 @@
 [ext_resource path="res://Blocks/BasicBlock.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blocks/HalfBlock.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://background.png" type="Texture" id=5]
 [ext_resource path="res://Globuli/Globuli.tscn" type="PackedScene" id=6]
 
 [node name="level_2" type="Node2D" index="0"]
@@ -225,7 +225,7 @@ position = Vector2( 990, 20 )
 
 [node name="BasicBlock61" parent="Blocks/white" index="52" instance=ExtResource( 2 )]
 
-position = Vector2( 1050, -30 )
+position = Vector2( 1050, -60 )
 
 [node name="BasicBlock62" parent="Blocks/white" index="53" instance=ExtResource( 2 )]
 
@@ -249,7 +249,7 @@ position = Vector2( 1290, 10 )
 
 [node name="BasicBlock67" parent="Blocks/white" index="58" instance=ExtResource( 2 )]
 
-position = Vector2( 1050, 30 )
+position = Vector2( 1050, 0 )
 
 [node name="BasicBlock44" parent="Blocks/white" index="59" instance=ExtResource( 2 )]
 
@@ -456,6 +456,8 @@ position = Vector2( 1350, -20 )
 position = Vector2( 510, 310 )
 
 [node name="orange" type="Node2D" parent="Blocks" index="1"]
+
+editor/display_folded = true
 
 [node name="BasicBlock" parent="Blocks/orange" index="0" instance=ExtResource( 2 )]
 
@@ -750,8 +752,8 @@ motion_mirroring = Vector2( 0, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
 visible = false
-position = Vector2( 680, 295 )
-scale = Vector2( 32.0313, 17.4219 )
+position = Vector2( 818.975, 349.073 )
+scale = Vector2( 2.04882, 1.853 )
 texture = ExtResource( 5 )
 
 [node name="Globuli" type="Node2D" parent="." index="3"]

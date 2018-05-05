@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Level.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://background.png" type="Texture" id=3]
 [ext_resource path="res://Blocks/BasicBlock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Blocks/HalfBlock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Globuli/Globuli.tscn" type="PackedScene" id=6]
@@ -42,7 +42,6 @@ editor_draw_drag_margin = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="1"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -63,8 +62,8 @@ motion_mirroring = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
-position = Vector2( 100, 260 )
-scale = Vector2( 11.9531, 8.98438 )
+position = Vector2( 274.51, 234.521 )
+scale = Vector2( 0.980392, 0.957381 )
 texture = ExtResource( 3 )
 
 [node name="blocks" type="Node2D" parent="." index="2"]
