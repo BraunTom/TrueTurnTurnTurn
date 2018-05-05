@@ -14,8 +14,9 @@ func collideWithPlayer(collider, collision):
 	elif (not collider is Player):
 		return
 	else:
-		var dir = -collision.travel.reflect(collision.normal)
-		collider.velocity = collider.velocity + applyFlip(dir * 100)
+		var dir = (collision.normal)
+		print(dir)
+		collider.velocity = collider.velocity + (dir * 1000)
 		
 func flipSpeed(vector):
 	directionOfVelocity = vector
