@@ -5,9 +5,7 @@ const Player = preload("res://Player.gd")
 # var b = "textvar"
 
 func collideWithPlayer(collider, collision):
-	if(not block.isActive()):
-		return
-	elif (not collider is Player):
+	if (not collider is Player):
 		return
 	else:
 		block.set_collision_layer(2)
