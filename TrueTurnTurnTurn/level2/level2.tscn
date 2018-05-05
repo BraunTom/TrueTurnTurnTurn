@@ -1,7 +1,788 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://level2/level2.gd" type="Script" id=1]
+[ext_resource path="res://Blocks/BasicBlock.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Blocks/HalfBlock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://Globuli/Globuli.tscn" type="PackedScene" id=6]
 
 [node name="level_2" type="Node2D" index="0"]
 
+script = ExtResource( 1 )
+
 [node name="Blocks" type="Node2D" parent="." index="0"]
+
+[node name="white" type="Node2D" parent="Blocks" index="0"]
+
+[node name="BasicBlock" parent="Blocks/white" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 30, 70 )
+
+[node name="BasicBlock2" parent="Blocks/white" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -30, 130 )
+
+[node name="BasicBlock3" parent="Blocks/white" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( -90, 190 )
+
+[node name="BasicBlock4" parent="Blocks/white" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( -90, 250 )
+
+[node name="BasicBlock5" parent="Blocks/white" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( -90, 310 )
+
+[node name="BasicBlock6" parent="Blocks/white" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( -30, 370 )
+
+[node name="BasicBlock7" parent="Blocks/white" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 30, 430 )
+
+[node name="BasicBlock8" parent="Blocks/white" index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 90, 430 )
+
+[node name="BasicBlock9" parent="Blocks/white" index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 150, 430 )
+
+[node name="BasicBlock10" parent="Blocks/white" index="9" instance=ExtResource( 2 )]
+
+position = Vector2( 210, 300 )
+
+[node name="BasicBlock11" parent="Blocks/white" index="10" instance=ExtResource( 2 )]
+
+position = Vector2( 330, 430 )
+
+[node name="BasicBlock12" parent="Blocks/white" index="11" instance=ExtResource( 2 )]
+
+position = Vector2( 390, 430 )
+
+[node name="BasicBlock13" parent="Blocks/white" index="12" instance=ExtResource( 2 )]
+
+position = Vector2( 450, 430 )
+
+[node name="BasicBlock14" parent="Blocks/white" index="13" instance=ExtResource( 2 )]
+
+position = Vector2( 510, 430 )
+
+[node name="BasicBlock15" parent="Blocks/white" index="14" instance=ExtResource( 2 )]
+
+position = Vector2( 570, 430 )
+
+[node name="BasicBlock16" parent="Blocks/white" index="15" instance=ExtResource( 2 )]
+
+position = Vector2( 570, 310 )
+
+[node name="BasicBlock18" parent="Blocks/white" index="16" instance=ExtResource( 2 )]
+
+position = Vector2( 630, 310 )
+
+[node name="BasicBlock19" parent="Blocks/white" index="17" instance=ExtResource( 2 )]
+
+position = Vector2( 750, 370 )
+
+[node name="BasicBlock21" parent="Blocks/white" index="18" instance=ExtResource( 2 )]
+
+position = Vector2( 690, 310 )
+
+[node name="BasicBlock22" parent="Blocks/white" index="19" instance=ExtResource( 2 )]
+
+position = Vector2( 810, 430 )
+
+[node name="BasicBlock23" parent="Blocks/white" index="20" instance=ExtResource( 2 )]
+
+position = Vector2( 870, 430 )
+
+[node name="BasicBlock24" parent="Blocks/white" index="21" instance=ExtResource( 2 )]
+
+position = Vector2( 930, 430 )
+
+[node name="BasicBlock26" parent="Blocks/white" index="22" instance=ExtResource( 2 )]
+
+position = Vector2( 1050, 430 )
+
+[node name="BasicBlock27" parent="Blocks/white" index="23" instance=ExtResource( 2 )]
+
+position = Vector2( 1110, 430 )
+
+[node name="BasicBlock28" parent="Blocks/white" index="24" instance=ExtResource( 2 )]
+
+position = Vector2( 1170, 430 )
+
+[node name="BasicBlock29" parent="Blocks/white" index="25" instance=ExtResource( 2 )]
+
+position = Vector2( 1230, 430 )
+
+[node name="BasicBlock30" parent="Blocks/white" index="26" instance=ExtResource( 2 )]
+
+position = Vector2( 1290, 370 )
+
+[node name="BasicBlock31" parent="Blocks/white" index="27" instance=ExtResource( 2 )]
+
+position = Vector2( 1290, 310 )
+
+[node name="BasicBlock32" parent="Blocks/white" index="28" instance=ExtResource( 2 )]
+
+position = Vector2( 1290, 250 )
+
+[node name="BasicBlock33" parent="Blocks/white" index="29" instance=ExtResource( 2 )]
+
+position = Vector2( 1290, 190 )
+
+[node name="BasicBlock34" parent="Blocks/white" index="30" instance=ExtResource( 2 )]
+
+position = Vector2( 1290, 130 )
+
+[node name="BasicBlock35" parent="Blocks/white" index="31" instance=ExtResource( 2 )]
+
+position = Vector2( 1230, 130 )
+
+[node name="BasicBlock36" parent="Blocks/white" index="32" instance=ExtResource( 2 )]
+
+position = Vector2( 1170, 130 )
+
+[node name="BasicBlock37" parent="Blocks/white" index="33" instance=ExtResource( 2 )]
+
+position = Vector2( 1110, 130 )
+
+[node name="BasicBlock42" parent="Blocks/white" index="34" instance=ExtResource( 2 )]
+
+position = Vector2( 750, 130 )
+
+[node name="BasicBlock43" parent="Blocks/white" index="35" instance=ExtResource( 2 )]
+
+position = Vector2( 690, 130 )
+
+[node name="BasicBlock45" parent="Blocks/white" index="36" instance=ExtResource( 2 )]
+
+position = Vector2( 90, 10 )
+
+[node name="BasicBlock46" parent="Blocks/white" index="37" instance=ExtResource( 2 )]
+
+position = Vector2( 150, 10 )
+
+[node name="BasicBlock47" parent="Blocks/white" index="38" instance=ExtResource( 2 )]
+
+position = Vector2( 210, 10 )
+
+[node name="BasicBlock48" parent="Blocks/white" index="39" instance=ExtResource( 2 )]
+
+position = Vector2( 270, 10 )
+
+[node name="BasicBlock49" parent="Blocks/white" index="40" instance=ExtResource( 2 )]
+
+position = Vector2( 330, 10 )
+
+[node name="BasicBlock50" parent="Blocks/white" index="41" instance=ExtResource( 2 )]
+
+position = Vector2( 390, 10 )
+
+[node name="BasicBlock51" parent="Blocks/white" index="42" instance=ExtResource( 2 )]
+
+position = Vector2( 450, 10 )
+
+[node name="BasicBlock52" parent="Blocks/white" index="43" instance=ExtResource( 2 )]
+
+position = Vector2( 510, 10 )
+
+[node name="BasicBlock53" parent="Blocks/white" index="44" instance=ExtResource( 2 )]
+
+position = Vector2( 570, 10 )
+
+[node name="BasicBlock54" parent="Blocks/white" index="45" instance=ExtResource( 2 )]
+
+position = Vector2( 630, 10 )
+
+[node name="BasicBlock55" parent="Blocks/white" index="46" instance=ExtResource( 2 )]
+
+position = Vector2( 690, 10 )
+
+[node name="BasicBlock56" parent="Blocks/white" index="47" instance=ExtResource( 2 )]
+
+position = Vector2( 750, 10 )
+
+[node name="BasicBlock57" parent="Blocks/white" index="48" instance=ExtResource( 2 )]
+
+position = Vector2( 810, 10 )
+
+[node name="BasicBlock58" parent="Blocks/white" index="49" instance=ExtResource( 2 )]
+
+position = Vector2( 870, 10 )
+
+[node name="BasicBlock59" parent="Blocks/white" index="50" instance=ExtResource( 2 )]
+
+position = Vector2( 930, 10 )
+
+[node name="BasicBlock60" parent="Blocks/white" index="51" instance=ExtResource( 2 )]
+
+position = Vector2( 990, 20 )
+
+[node name="BasicBlock61" parent="Blocks/white" index="52" instance=ExtResource( 2 )]
+
+position = Vector2( 1050, -30 )
+
+[node name="BasicBlock62" parent="Blocks/white" index="53" instance=ExtResource( 2 )]
+
+position = Vector2( 1110, -50 )
+
+[node name="BasicBlock63" parent="Blocks/white" index="54" instance=ExtResource( 2 )]
+
+position = Vector2( 1170, 10 )
+
+[node name="BasicBlock64" parent="Blocks/white" index="55" instance=ExtResource( 2 )]
+
+position = Vector2( 1170, -50 )
+
+[node name="BasicBlock65" parent="Blocks/white" index="56" instance=ExtResource( 2 )]
+
+position = Vector2( 1230, -20 )
+
+[node name="BasicBlock66" parent="Blocks/white" index="57" instance=ExtResource( 2 )]
+
+position = Vector2( 1290, 10 )
+
+[node name="BasicBlock67" parent="Blocks/white" index="58" instance=ExtResource( 2 )]
+
+position = Vector2( 1050, 30 )
+
+[node name="BasicBlock44" parent="Blocks/white" index="59" instance=ExtResource( 2 )]
+
+position = Vector2( 630, 130 )
+
+[node name="BasicBlock20" parent="Blocks/white" index="60" instance=ExtResource( 2 )]
+
+position = Vector2( 750, 430 )
+
+[node name="BasicBlock68" parent="Blocks/white" index="61" instance=ExtResource( 2 )]
+
+position = Vector2( 750, 490 )
+
+[node name="BasicBlock69" parent="Blocks/white" index="62" instance=ExtResource( 2 )]
+
+position = Vector2( 690, 550 )
+
+[node name="BasicBlock70" parent="Blocks/white" index="63" instance=ExtResource( 2 )]
+
+position = Vector2( 630, 610 )
+
+[node name="BasicBlock71" parent="Blocks/white" index="64" instance=ExtResource( 2 )]
+
+position = Vector2( 570, 670 )
+
+[node name="BasicBlock72" parent="Blocks/white" index="65" instance=ExtResource( 2 )]
+
+position = Vector2( 150, 490 )
+
+[node name="BasicBlock73" parent="Blocks/white" index="66" instance=ExtResource( 2 )]
+
+position = Vector2( 150, 550 )
+
+[node name="BasicBlock74" parent="Blocks/white" index="67" instance=ExtResource( 2 )]
+
+position = Vector2( 210, 610 )
+
+[node name="BasicBlock75" parent="Blocks/white" index="68" instance=ExtResource( 2 )]
+
+position = Vector2( 210, 670 )
+
+[node name="BasicBlock76" parent="Blocks/white" index="69" instance=ExtResource( 2 )]
+
+position = Vector2( 270, 790 )
+
+[node name="BasicBlock77" parent="Blocks/white" index="70" instance=ExtResource( 2 )]
+
+position = Vector2( 330, 790 )
+
+[node name="BasicBlock78" parent="Blocks/white" index="71" instance=ExtResource( 2 )]
+
+position = Vector2( 390, 790 )
+
+[node name="BasicBlock79" parent="Blocks/white" index="72" instance=ExtResource( 2 )]
+
+position = Vector2( 450, 730 )
+
+[node name="BasicBlock80" parent="Blocks/white" index="73" instance=ExtResource( 2 )]
+
+position = Vector2( 510, 790 )
+
+[node name="BasicBlock81" parent="Blocks/white" index="74" instance=ExtResource( 2 )]
+
+position = Vector2( 570, 850 )
+
+[node name="BasicBlock82" parent="Blocks/white" index="75" instance=ExtResource( 2 )]
+
+position = Vector2( 630, 910 )
+
+[node name="BasicBlock83" parent="Blocks/white" index="76" instance=ExtResource( 2 )]
+
+position = Vector2( 630, 970 )
+
+[node name="BasicBlock84" parent="Blocks/white" index="77" instance=ExtResource( 2 )]
+
+position = Vector2( 690, 1000 )
+
+[node name="BasicBlock85" parent="Blocks/white" index="78" instance=ExtResource( 2 )]
+
+position = Vector2( 750, 990 )
+
+[node name="BasicBlock86" parent="Blocks/white" index="79" instance=ExtResource( 2 )]
+
+position = Vector2( 810, 1010 )
+
+[node name="BasicBlock87" parent="Blocks/white" index="80" instance=ExtResource( 2 )]
+
+position = Vector2( 930, 910 )
+
+[node name="BasicBlock88" parent="Blocks/white" index="81" instance=ExtResource( 2 )]
+
+position = Vector2( 870, 850 )
+
+[node name="BasicBlock89" parent="Blocks/white" index="82" instance=ExtResource( 2 )]
+
+position = Vector2( 930, 850 )
+
+[node name="BasicBlock90" parent="Blocks/white" index="83" instance=ExtResource( 2 )]
+
+position = Vector2( 930, 790 )
+
+[node name="BasicBlock91" parent="Blocks/white" index="84" instance=ExtResource( 2 )]
+
+position = Vector2( 990, 790 )
+
+[node name="BasicBlock92" parent="Blocks/white" index="85" instance=ExtResource( 2 )]
+
+position = Vector2( 1050, 730 )
+
+[node name="BasicBlock93" parent="Blocks/white" index="86" instance=ExtResource( 2 )]
+
+position = Vector2( 1110, 790 )
+
+[node name="BasicBlock94" parent="Blocks/white" index="87" instance=ExtResource( 2 )]
+
+position = Vector2( 1170, 790 )
+
+[node name="BasicBlock95" parent="Blocks/white" index="88" instance=ExtResource( 2 )]
+
+position = Vector2( 1230, 790 )
+
+[node name="BasicBlock96" parent="Blocks/white" index="89" instance=ExtResource( 2 )]
+
+position = Vector2( 1290, 730 )
+
+[node name="BasicBlock97" parent="Blocks/white" index="90" instance=ExtResource( 2 )]
+
+position = Vector2( 1350, 730 )
+
+[node name="BasicBlock98" parent="Blocks/white" index="91" instance=ExtResource( 2 )]
+
+position = Vector2( 1410, 730 )
+
+[node name="BasicBlock99" parent="Blocks/white" index="92" instance=ExtResource( 2 )]
+
+position = Vector2( 1470, 730 )
+
+[node name="BasicBlock100" parent="Blocks/white" index="93" instance=ExtResource( 2 )]
+
+position = Vector2( 1530, 730 )
+
+[node name="BasicBlock101" parent="Blocks/white" index="94" instance=ExtResource( 2 )]
+
+position = Vector2( 1590, 670 )
+
+[node name="BasicBlock102" parent="Blocks/white" index="95" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 610 )
+
+[node name="BasicBlock103" parent="Blocks/white" index="96" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 550 )
+
+[node name="BasicBlock104" parent="Blocks/white" index="97" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 490 )
+
+[node name="BasicBlock105" parent="Blocks/white" index="98" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 430 )
+
+[node name="BasicBlock106" parent="Blocks/white" index="99" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 370 )
+
+[node name="BasicBlock107" parent="Blocks/white" index="100" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 310 )
+
+[node name="BasicBlock108" parent="Blocks/white" index="101" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 250 )
+
+[node name="BasicBlock109" parent="Blocks/white" index="102" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 190 )
+
+[node name="BasicBlock110" parent="Blocks/white" index="103" instance=ExtResource( 2 )]
+
+position = Vector2( 1650, 130 )
+
+[node name="BasicBlock111" parent="Blocks/white" index="104" instance=ExtResource( 2 )]
+
+position = Vector2( 1590, 70 )
+
+[node name="BasicBlock112" parent="Blocks/white" index="105" instance=ExtResource( 2 )]
+
+position = Vector2( 1530, 70 )
+
+[node name="BasicBlock113" parent="Blocks/white" index="106" instance=ExtResource( 2 )]
+
+position = Vector2( 1470, 10 )
+
+[node name="BasicBlock114" parent="Blocks/white" index="107" instance=ExtResource( 2 )]
+
+position = Vector2( 1410, -20 )
+
+[node name="BasicBlock115" parent="Blocks/white" index="108" instance=ExtResource( 2 )]
+
+position = Vector2( 1350, -20 )
+
+[node name="BasicBlock17" parent="Blocks/white" index="109" instance=ExtResource( 2 )]
+
+position = Vector2( 510, 310 )
+
+[node name="orange" type="Node2D" parent="Blocks" index="1"]
+
+[node name="BasicBlock" parent="Blocks/orange" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 270, 730 )
+color = 1
+
+[node name="BasicBlock14" parent="Blocks/orange" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 840, 310 )
+color = 1
+
+[node name="BasicBlock13" parent="Blocks/orange" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 990, 430 )
+color = 1
+
+[node name="BasicBlock2" parent="Blocks/orange" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 210, 550 )
+color = 1
+
+[node name="BasicBlock3" parent="Blocks/orange" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 570, 910 )
+color = 1
+
+[node name="BasicBlock4" parent="Blocks/orange" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 1530, 670 )
+color = 1
+
+[node name="BasicBlock5" parent="Blocks/orange" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 1590, 430 )
+color = 1
+
+[node name="BasicBlock6" parent="Blocks/orange" index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 1470, 70 )
+color = 1
+
+[node name="BasicBlock7" parent="Blocks/orange" index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 1350, 190 )
+color = 1
+
+[node name="BasicBlock8" parent="Blocks/orange" index="9" instance=ExtResource( 2 )]
+
+position = Vector2( 1350, 250 )
+color = 1
+
+[node name="BasicBlock9" parent="Blocks/orange" index="10" instance=ExtResource( 2 )]
+
+position = Vector2( 1350, 310 )
+color = 1
+
+[node name="BasicBlock10" parent="Blocks/orange" index="11" instance=ExtResource( 2 )]
+
+position = Vector2( 1530, 130 )
+color = 1
+
+[node name="BasicBlock11" parent="Blocks/orange" index="12" instance=ExtResource( 2 )]
+
+position = Vector2( 1530, 190 )
+color = 1
+
+[node name="BasicBlock15" parent="Blocks/orange" index="13" instance=ExtResource( 2 )]
+
+position = Vector2( 1500, 250 )
+color = 1
+
+[node name="BasicBlock16" parent="Blocks/orange" index="14" instance=ExtResource( 2 )]
+
+position = Vector2( 1590, 130 )
+color = 1
+
+[node name="BasicBlock17" parent="Blocks/orange" index="15" instance=ExtResource( 2 )]
+
+position = Vector2( 1320, 160 )
+color = 1
+
+[node name="BasicBlock18" parent="Blocks/orange" index="16" instance=ExtResource( 2 )]
+
+position = Vector2( 1334.26, 0.266296 )
+rotation = 1.13446
+color = 1
+
+[node name="BasicBlock12" parent="Blocks/orange" index="17" instance=ExtResource( 2 )]
+
+position = Vector2( 1390, 520 )
+color = 1
+
+[node name="StaticBody2D" parent="Blocks/orange" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 630, 850 )
+rotation = 1.5708
+color = 1
+
+[node name="StaticBody2D2" parent="Blocks/orange" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 1590, 370 )
+color = 1
+
+[node name="StaticBody2D3" parent="Blocks/orange" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 1590, 490 )
+rotation = 4.71239
+color = 1
+
+[node name="StaticBody2D4" parent="Blocks/orange" index="21" instance=ExtResource( 3 )]
+
+position = Vector2( 1470, 130 )
+rotation = 4.71239
+color = 1
+
+[node name="StaticBody2D5" parent="Blocks/orange" index="22" instance=ExtResource( 3 )]
+
+position = Vector2( 1439.9, 58.6603 )
+rotation = 2.35619
+color = 1
+
+[node name="StaticBody2D6" parent="Blocks/orange" index="23" instance=ExtResource( 3 )]
+
+position = Vector2( 1590, 190 )
+color = 1
+
+[node name="StaticBody2D7" parent="Blocks/orange" index="24" instance=ExtResource( 3 )]
+
+position = Vector2( 1590, 190 )
+rotation = 3.14159
+color = 1
+
+[node name="red" type="Node2D" parent="Blocks" index="2"]
+
+[node name="BasicBlock" parent="Blocks/red" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 690, 940 )
+color = 2
+
+[node name="BasicBlock2" parent="Blocks/red" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 750, 930 )
+color = 2
+
+[node name="BasicBlock3" parent="Blocks/red" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 810, 950 )
+color = 2
+
+[node name="BasicBlock4" parent="Blocks/red" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 870, 910 )
+color = 2
+
+[node name="BasicBlock5" parent="Blocks/red" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 1050, 790 )
+color = 2
+
+[node name="BasicBlock6" parent="Blocks/red" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 1320, 450 )
+color = 2
+
+[node name="yellow" type="Node2D" parent="Blocks" index="3"]
+
+[node name="BasicBlock" parent="Blocks/yellow" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 450, 310 )
+color = 3
+
+[node name="BasicBlock6" parent="Blocks/yellow" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 630, 490 )
+color = 3
+
+[node name="BasicBlock2" parent="Blocks/yellow" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 990, 370 )
+color = 3
+
+[node name="BasicBlock3" parent="Blocks/yellow" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 810, 190 )
+color = 3
+
+[node name="BasicBlock4" parent="Blocks/yellow" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 870, 250 )
+color = 3
+
+[node name="BasicBlock5" parent="Blocks/yellow" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 930, 310 )
+color = 3
+
+[node name="blue" type="Node2D" parent="Blocks" index="4"]
+
+editor/display_folded = true
+
+[node name="BasicBlock" parent="Blocks/blue" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 210, 430 )
+color = 4
+
+[node name="BasicBlock2" parent="Blocks/blue" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 270, 430 )
+color = 4
+
+[node name="BasicBlock3" parent="Blocks/blue" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 390, 370 )
+color = 4
+
+[node name="BasicBlock4" parent="Blocks/blue" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 570, 550 )
+color = 4
+
+[node name="BasicBlock5" parent="Blocks/blue" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 630, 670 )
+color = 4
+
+[node name="BasicBlock6" parent="Blocks/blue" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 210, 730 )
+color = 4
+
+[node name="BasicBlock8" parent="Blocks/blue" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 450, 790 )
+color = 4
+
+[node name="BasicBlock7" parent="Blocks/blue" index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 990, 850 )
+color = 4
+
+[node name="green" type="Node2D" parent="Blocks" index="5"]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 4 )]
+
+position = Vector2( -30, 310 )
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="4"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+visible = false
+position = Vector2( 680, 295 )
+scale = Vector2( 32.0313, 17.4219 )
+texture = ExtResource( 5 )
+
+[node name="Globuli" type="Node2D" parent="." index="3"]
+
+[node name="Globuli_yellow" parent="Globuli" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 630, 420 )
+color = 3
+
+[node name="Globuli_yellow2" parent="Globuli" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 1230, 370 )
+color = 3
+
+[node name="Globuli_orange" parent="Globuli" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 610, 370 )
+color = 1
+
+[node name="Globuli_blue" parent="Globuli" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 690, 80 )
+color = 4
+
+[node name="goal" parent="." index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 1170, 70 )
+color = 6
+
+[node name="Globuli_start" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( -30, 320 )
 
 
