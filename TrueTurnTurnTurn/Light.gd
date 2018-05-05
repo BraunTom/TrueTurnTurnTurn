@@ -1,1 +1,1 @@
-enum Colors {WHITE, ORANGE}
+enum Colors {WHITE, ORANGE, GREEN, RED}
