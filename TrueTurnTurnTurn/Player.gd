@@ -49,7 +49,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_up") && is_on_floor():
 		velocity = jump(velocity)
 	if Input.is_action_pressed("ui_down"):
-		rotateControls(controls)
+		die()
 	if velocity.length() > 0:
 		$AnimatedSprite.play()
 	else:
