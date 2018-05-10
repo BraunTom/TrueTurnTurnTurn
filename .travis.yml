@@ -42,9 +42,9 @@ deploy:
   skip-cleanup: true
   api_key: $GITHUB_TOKEN
   file:
-    - "${GAME_NAME}-linux.zip"
-    - "${GAME_NAME}-windows.zip"
-    - "${GAME_NAME}-mac.zip"
+    - "TrueTurnTurnTurn/${GAME_NAME}-linux.zip"
+    - "TrueTurnTurnTurn/${GAME_NAME}-windows.zip"
+    - "TrueTurnTurnTurn/${GAME_NAME}-mac.zip"
   on:
     # Create GitHub Releases for new git tags
     # regardless of the branch.
@@ -58,7 +58,7 @@ deploy:
 - provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  local-dir: output/html5
+  local-dir: TrueTurnTurnTurn/output/html5
   on:
     # This will only update the game with new commits from the master branch
     # You can optionally only update the game on new git tags.
